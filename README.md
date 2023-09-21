@@ -1,7 +1,7 @@
 # FloodCraft - A Flood mitigation strategies game
 ## About
 Welcome to FloodCraft, an innovative and engaging educational game designed to teach young kids about vital flood mitigation strategies in an interactive and enjoyable manner. This game provides a unique platform for players to explore and understand various flood preparedness techniques, empowering them with knowledge that can make a difference in their real-world communities.
-The game is structured into different sections, each dedicated to specific flood safety techniques. Ranging from implementing wet floodproofing to deploying sandbags, constructing flood walls, and elevating structures, players will dive into a learning adventure that shows how these methods make communities stronger and better at handling floods.
+The game is structured into different sections, each dedicated to a specific flood mitigatoin strategy. Ranging from implementing wet floodproofing to deploying sandbags, constructing flood walls, and elevating structures, players will dive into a learning adventure that shows how these methods make communities stronger and better at handling floods.
 ## How to Play
 If you want to play the game, please follow the instructions below for setup.
 ### How to Install
