@@ -1,6 +1,8 @@
 # FloodCraft - Flood Mitigation Strategy Game
 
-![FloodCraft Gameplay](https://github.com/uihilab/floodcraft/blob/master/images/floodcraft_gameplay.png)
+<div style="text-align: center;">
+    <img src="https://github.com/uihilab/floodcraft/blob/master/floodcraft_gameplay.png" alt="FloodCraft Gameplay" style="width:60%;">
+</div>
 
 ## About
 Welcome to FloodCraft, an innovative and engaging educational game designed to teach K-12 students about essential flood mitigation strategies in an interactive and enjoyable manner. Built on the popular Minecraft platform, this game provides a unique opportunity for players to explore and understand various flood preparedness techniques, empowering them with knowledge that can make a difference in their real-world communities.
