@@ -1,7 +1,7 @@
 # FloodCraft - Flood Mitigation Strategy Game
 
 <div style="text-align: center;">
-    <img src="https://github.com/uihilab/floodcraft/blob/master/floodcraft_gameplay.png" alt="FloodCraft Gameplay" style="width:60%;">
+    <img src="https://github.com/uihilab/floodcraft/blob/main/floodcraft_gameplay.png" alt="FloodCraft Gameplay" style="width:60%;">
 </div>
 
 ## About
