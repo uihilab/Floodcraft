@@ -68,4 +68,6 @@ FloodCraft was developed by the University of Iowa Hydroinformatics Lab (UIHI La
 
 ## References
 
-References will be added soon.
+Emiroglu, E., Grant, C. A., Sermet, Y., & Demir, I. (2024). Floodcraft: Game-based Interactive Learning Environment using Minecraft for Flood Mitigation and Preparedness for K-12 Education. EarthArxiv, 7815. [https://doi.org/10.31223/X52Q55](https://doi.org/10.31223/X52Q55)
+
+
