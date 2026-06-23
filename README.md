@@ -16,43 +16,42 @@ If you would like to play the game, please follow the setup instructions below.
 ### How to Install
 
 **Prerequisites:** 
-- Java Development Kit (JDK) 8
-- Minecraft Java Edition
-- Minecraft Forge 1.16.5
+- Java Development Kit (JDK) 21 (required for Minecraft 1.21.4)
+- Minecraft Java Edition (Version 1.21.4)
+- Fabric Loader (Version 0.19.3 or latest for 1.21.4)
 
 You can find tutorials on YouTube for installing these prerequisites on your computer. Below are some links, but feel free to search for other tutorials specific to your operating system:
 
 - [Minecraft Java Installation on MacOS](https://www.youtube.com/watch?v=USKdqHp3Glg)
 - [Minecraft Java Installation on Other Systems](https://www.youtube.com/watch?v=V-3dlZsB0dw)
 
-#### Installation of CustomNPCs
-
-1. Download the CustomNPCs jar file from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/custom-npcs/files?version=1.16.5).
-2. Locate the `minecraft` folder on your computer, then navigate to the `mods` folder inside it.
-3. Place the downloaded jar file into the `mods` folder.
-
-#### Installation of Floodmod
-
-1. Download the Floodmod jar file from this repository.
-2. Place the jar file into the same `mods` folder where you installed CustomNPCs.
+#### Installation of Fabric and Required Mods
+1. Install Fabric Loader for Minecraft 1.21.4 using the installer from the Fabric website.
+2. Locate the minecraft folder on your computer (or your launcher instance's directory), then navigate to the mods folder inside it.
+3. Place the following required mods (compatible with Minecraft 1.21.4) into the mods folder:
+    - Fabric API (Download from CurseForge or Modrinth)
+    - CreatureChat (Provides the AI-powered NPC interactions, compatible with 1.21.4)
+    - Easy NPC and Easy NPC Config UI (Handles custom guide NPCs, compatible with 1.21.4)
 
 #### Download the World Folder
 
-1. Download the world folder from this repository.
-2. Place it inside the `saves` folder, which is located in your `minecraft` directory.
-3. When you open the game, you will see "Flood World" as a world option. Select that world and start playing!
+1. Locate the world folder Arnis World 4.2_backup_level4_start in this repository
+Place the world folder inside the saves folder located in your minecraft directory.
+When you open the game, you will see the world in your Singleplayer world list. Select the world and start playing!
 
 ### Tasks
 
-There are four tasks that players must complete to finish the game, each related to a different mitigation strategy:
+There are five tasks that players can choose to complete, each representing a different challenge:
 
-1. **Floodwalls:** Players are required to place floodwall blocks around a river to prevent flooding from rising water. After placing the blocks, initiate flooding by pressing a button to test your setup. If there are no leaks, you will proceed to the next task.
-   
-2. **Sandbagging:** Place sandbag blocks around a house and follow the same process to check your setup and advance.
+**Sandbag Defense**: Learn how sandbags are used as a temporary barrier against rising water. Observe the floodwaters rise and verify that the sandbag perimeter successfully protects the house.
 
-3. **Wet Floodproofing:** Learn about wet floodproofing by referring to in-game images, NPC guidance, and ChatGPT assistance via the chat section.
+**Wildlife Rescue**: Help! Floodwaters are rising in the Jean Lafitte swamp. Locate and rescue two stranded pets: a cat and a dog. Leash them and guide them across the bridge to the safety pen before the timer runs out.
 
-4. **Elevation:** Elevate the structure using provided blocks within a given timeframe. Your score will be updated upon completion of each task.
+**Storm Drains**: Leaves and trash are clogging the neighborhood storm drains, causing the streets to flood. Locate and clear all 5 clogged drains (marked with glowing outlines) using your shears to drain the water from the streets.
+
+**Save the Furniture**: Move valuable furniture and items to safety upstairs. Collect 12 items (beds, bookshelves, jukebox, furnace, crafting table, lectern, and armor stand with diamond armor) using your pickaxe and place them in the upstairs chest before the house floods.
+
+**Spillway Repair**: Repair a reservoir spillway to safely release high water. Swim down to clear 3 blockages from the spillway gate, retrieve the red cogwheel from the toolbox to place it on the control panel, flip the generator switch, and pull the main lever to open the gates and save the town!
 
 ## Feedback
 
