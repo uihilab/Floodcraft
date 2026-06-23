@@ -1,0 +1,5 @@
+# Ignore Minecraft lock files
+session.lock
+
+# Ignore macOS system files
+.DS_Store
