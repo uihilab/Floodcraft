@@ -9,8 +9,8 @@ scoreboard players add #game_id sd_game 1
 # Set state to Active (1)
 scoreboard players set #state sd_state 1
  
-# Set timer to 300 ticks (15 seconds of flooding)
-scoreboard players set #time sd_timer 300
+# Set timer to 700 ticks (35 seconds: 20s prep + 15s flood)
+scoreboard players set #time sd_timer 700
  
 # Clear user-placed guide blocks from the world
 # Guide Block Removal Commands
@@ -118,7 +118,7 @@ setblock 1204 -53 695 minecraft:yellow_concrete replace
 setblock 1204 -53 696 minecraft:yellow_concrete replace
 setblock 1204 -53 697 minecraft:yellow_concrete replace
 setblock 1204 -53 698 minecraft:yellow_concrete replace
-setblock 1204 -53 699 minecraft:yellow_concrete replace
+# GAP 1: setblock 1204 -53 699 minecraft:yellow_concrete replace
 setblock 1204 -53 700 minecraft:yellow_concrete replace
 setblock 1204 -53 701 minecraft:yellow_concrete replace
 setblock 1204 -53 702 minecraft:yellow_concrete replace
@@ -149,7 +149,7 @@ setblock 1209 -53 684 minecraft:yellow_concrete replace
 setblock 1209 -53 705 minecraft:yellow_concrete replace
 setblock 1210 -53 682 minecraft:yellow_concrete replace
 setblock 1210 -53 705 minecraft:yellow_concrete replace
-setblock 1211 -53 682 minecraft:yellow_concrete replace
+# GAP 2: setblock 1211 -53 682 minecraft:yellow_concrete replace
 setblock 1211 -53 705 minecraft:yellow_concrete replace
 setblock 1212 -53 682 minecraft:yellow_concrete replace
 setblock 1212 -53 705 minecraft:yellow_concrete replace
@@ -168,7 +168,7 @@ setblock 1216 -53 704 minecraft:yellow_concrete replace
 setblock 1217 -53 683 minecraft:yellow_concrete replace
 setblock 1217 -53 684 minecraft:yellow_concrete replace
 setblock 1217 -53 702 minecraft:yellow_concrete replace
-setblock 1218 -53 684 minecraft:yellow_concrete replace
+# GAP 3: setblock 1218 -53 684 minecraft:yellow_concrete replace
 setblock 1218 -53 702 minecraft:yellow_concrete replace
 setblock 1219 -53 684 minecraft:yellow_concrete replace
 setblock 1219 -53 702 minecraft:yellow_concrete replace
@@ -178,7 +178,7 @@ setblock 1220 -53 685 minecraft:yellow_concrete replace
 setblock 1220 -53 703 minecraft:yellow_concrete replace
 setblock 1221 -53 685 minecraft:yellow_concrete replace
 setblock 1221 -53 686 minecraft:yellow_concrete replace
-setblock 1221 -53 703 minecraft:yellow_concrete replace
+# GAP 4: setblock 1221 -53 703 minecraft:yellow_concrete replace
 setblock 1222 -53 686 minecraft:yellow_concrete replace
 setblock 1222 -53 703 minecraft:yellow_concrete replace
 setblock 1223 -53 686 minecraft:yellow_concrete replace
@@ -206,7 +206,7 @@ setblock 1227 -53 697 minecraft:yellow_concrete replace
 setblock 1228 -53 688 minecraft:yellow_concrete replace
 setblock 1228 -53 689 minecraft:yellow_concrete replace
 setblock 1228 -53 690 minecraft:yellow_concrete replace
-setblock 1228 -53 691 minecraft:yellow_concrete replace
+# GAP 5: setblock 1228 -53 691 minecraft:yellow_concrete replace
 setblock 1228 -53 692 minecraft:yellow_concrete replace
 setblock 1228 -53 693 minecraft:yellow_concrete replace
  
@@ -235,8 +235,9 @@ scoreboard players set @a sd_deaths 0
 # Clear player inventory to prevent carrying over other items
 clear @a
  
-# Give players the checklist/plan book
-item replace entity @a container.0 with written_book[written_book_content={title:"Defense Plan",author:"City Engineer",pages:['{"text":"Sandbag Defense:\\n\\nWelcome to the flood\\nprotection demo!\\n\\nObserve how the houses\\nare protected:\\n\\n- Sandbag barriers\\n  (1 block high)\\n  keep water away\\n  from the building.\\n\\n(Flip page ->)"}','{"text":"Did you know?\\n\\nSandbags are cheap and\\neasy to deploy but\\nonly work for shallow\\nflooding.\\n\\nThey must form a\\ncontinuous line to\\nkeep the water out!"}']}] 1
+# # Give players the checklist/plan book and 10 sandbags
+item replace entity @a hotbar.0 with written_book[written_book_content={title:"Defense Plan",author:"City Engineer",pages:['{"text":"Sandbag Defense:\\n\\nUh oh! The crew missed\\na few spots!\\n\\nTake the sandbags in\\nyour inventory and\\nrun around the house\\nto plug the 5 gaps\\nbefore the flood hits!\\n\\n(Flip page ->)"}','{"text":"Did you know?\\n\\nSandbags are cheap and\\neasy to deploy but\\nonly work for shallow\\nflooding.\\n\\nThey must form a\\ncontinuous line to\\nkeep the water out!"}']}] 1
+item replace entity @a hotbar.1 with minecraft:yellow_concrete[minecraft:can_place_on={blocks:["minecraft:stone_bricks","minecraft:mossy_stone_bricks","minecraft:cracked_stone_bricks","minecraft:chiseled_stone_bricks","minecraft:stone","minecraft:grass_block","minecraft:dirt","minecraft:short_grass","minecraft:tall_grass"]}] 10
  
 # Teleport player to the front of the house facing North (towards the front door)
 tp @a 1218.5 -53 704.5 180 0
@@ -244,18 +245,18 @@ tp @a 1218.5 -53 704.5 180 0
 # Configure and show Boss Bar HUD overlay
 bossbar set minecraft:sd_bossbar visible true
 bossbar set minecraft:sd_bossbar players @a
-bossbar set minecraft:sd_bossbar max 300
-bossbar set minecraft:sd_bossbar value 300
+bossbar set minecraft:sd_bossbar max 700
+bossbar set minecraft:sd_bossbar value 700
  
 # Set title display times
 title @a times 10 60 10
  
 # Display start screen titles
-title @a title {"text":"SANDBAGS PLACED!","color":"green","bold":true}
-title @a subtitle {"text":"Watch the floodwaters rise and check the house defenses!","color":"yellow"}
+title @a title {"text":"MISSING SANDBAGS!","color":"red"}
+title @a subtitle {"text":"Fill the 5 gaps before the flood starts!","color":"yellow"}
  
 # Send chat instructions
-tellraw @a [{"text":"[Sandbag Defense] ","color":"gold"},{"text":"Sandbags successfully placed! Sandbag perimeter (1 high) placed around the house. Watch the floodwaters rise!","color":"white"}]
+tellraw @a [{"text":"[Sandbag Defense] ","color":"gold"},{"text":"The crew missed a few spots! Find the 5 gaps in the perimeter and fill them before the timer runs out!","color":"yellow"}]
  
 # Play alert sound
 playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 1 1

@@ -6,10 +6,10 @@ scoreboard players set #state sr_state 2
 # Set cooldown timer to 200 ticks (10 seconds for the animation and celebration)
 scoreboard players set #time sr_timer 200
 
-# Update Bossbar for gate opening state
+# Update Bossbar for gate closing state
 bossbar set minecraft:sr_bossbar max 200
 bossbar set minecraft:sr_bossbar value 200
-bossbar set minecraft:sr_bossbar name {"text":"Spillway Gate Opening...","color":"green"}
+bossbar set minecraft:sr_bossbar name {"text":"Spillway Gate Closing...","color":"green"}
 
 # Clean up any remaining guides
 kill @e[tag=sr_guide]
@@ -23,10 +23,10 @@ playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1.0 1.0
 
 # Display victory titles
 title @a title {"text":"DAM REPAIRED!","color":"green","bold":true}
-title @a subtitle {"text":"The spillway gates are opening!","color":"yellow"}
+title @a subtitle {"text":"The spillway gates are closing!","color":"yellow"}
 
 # Send chat announcement
-tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Victory! You successfully repaired the spillway and opened the gate. The reservoir water is draining safely!","color":"green"}]
+tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Victory! You successfully repaired the spillway and closed the gates. The flood has been stopped!","color":"green"}]
 
 # Update game progression completion state
 scoreboard players set #sr_won gp_completed 1

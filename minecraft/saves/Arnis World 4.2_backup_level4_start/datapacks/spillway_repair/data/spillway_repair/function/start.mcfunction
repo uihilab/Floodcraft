@@ -26,7 +26,7 @@ gamemode adventure @a
 clear @a
 
 # Give custom Netherite Pickaxe, Depth Strider boots, and guidebook
-item replace entity @a container.0 with written_book[written_book_content={title:"Spillway Manual",author:"Guide",pages:['{"text":"Spillway Repair!\\n\\nOh no! Heavy storms have filled the reservoir to maximum capacity, and the spillway gates are jammed with logs and debris!\\n\\nWe need to open the gates to release the water safely!\\n\\n(Flip page ->)"}','{"text":"How to Repair:\\n\\n1. Swim down to the gate and clear the 3 clog blocks using your pickaxe.\\n2. Open the toolbox chest on the shore, grab the red cogwheel, and place it on the control panel slot at (1267, -52, 676).\\n3. Flip the generator switch next to it at (1268, -52, 676)."}','{"text":"4. Once all 3 tasks are complete, pull the main lever at (1269, -52, 676) to open the gates and save the town!\\n\\nFollow the glowing green highlights on the clogs!"}']}] 1
+item replace entity @a hotbar.0 with written_book[written_book_content={title:"Spillway Manual",author:"Guide",pages:['{"text":"Spillway Repair!\\n\\nOh no! The spillway gates are jammed open and water is pouring out uncontrollably!\\n\\nWe need to close the gates to stop the flood!\\n\\n(Flip page ->)"}','{"text":"How to Repair:\\n\\n1. Swim down to the gate and clear the 3 clog blocks using your pickaxe.\\n2. Open the toolbox chest on the shore, grab the red cogwheel, and place it on the control panel slot at (1267, -52, 676).\\n3. Flip the generator switch next to it at (1268, -52, 676)."}','{"text":"4. Once all 3 tasks are complete, pull the main lever at (1269, -52, 676) to close the gates and save the town!\\n\\nFollow the glowing green highlights on the clogs!"}']}] 1
 give @a minecraft:netherite_pickaxe[minecraft:custom_name='{"text":"Debris Cleaver","color":"gold","bold":true}',minecraft:lore=['{"text":"Use this to clear the moss block clogs","color":"gray"}','{"text":"jamming the spillway gate!","color":"gray"}'],minecraft:enchantments={levels:{"minecraft:efficiency":5}},minecraft:can_break={blocks:["minecraft:moss_block","minecraft:red_concrete"]}] 1
 item replace entity @a armor.feet with minecraft:netherite_boots[minecraft:enchantments={levels:{"minecraft:depth_strider":3}}] 1
 
@@ -43,67 +43,67 @@ setblock 1268 -52 676 minecraft:lever[facing=north,face=floor,powered=false] rep
 setblock 1269 -53 676 minecraft:smooth_stone replace
 setblock 1269 -52 676 minecraft:lever[facing=north,face=floor,powered=false] replace
 
-# Spawn solid vertical gate blocks at left spillway (Y=-45 to Y=-42)
-setblock 1257 -45 650 minecraft:iron_bars replace
-setblock 1257 -44 650 minecraft:iron_bars replace
-setblock 1257 -43 650 minecraft:iron_bars replace
-setblock 1257 -42 650 minecraft:iron_bars replace
+# Spawn solid vertical gate blocks at left spillway (Y=-45 to Y=-42) - Open at start (Y=-45 water, Y=-44..-42 air)
+setblock 1257 -45 650 minecraft:water replace
+setblock 1257 -44 650 minecraft:air replace
+setblock 1257 -43 650 minecraft:air replace
+setblock 1257 -42 650 minecraft:air replace
 
-setblock 1258 -45 650 minecraft:iron_bars replace
-setblock 1258 -44 650 minecraft:iron_bars replace
-setblock 1258 -43 650 minecraft:iron_bars replace
-setblock 1258 -42 650 minecraft:iron_bars replace
+setblock 1258 -45 650 minecraft:water replace
+setblock 1258 -44 650 minecraft:air replace
+setblock 1258 -43 650 minecraft:air replace
+setblock 1258 -42 650 minecraft:air replace
 
-setblock 1258 -45 651 minecraft:iron_bars replace
-setblock 1258 -44 651 minecraft:iron_bars replace
-setblock 1258 -43 651 minecraft:iron_bars replace
-setblock 1258 -42 651 minecraft:iron_bars replace
+setblock 1258 -45 651 minecraft:water replace
+setblock 1258 -44 651 minecraft:air replace
+setblock 1258 -43 651 minecraft:air replace
+setblock 1258 -42 651 minecraft:air replace
 
-setblock 1259 -45 651 minecraft:iron_bars replace
-setblock 1259 -44 651 minecraft:iron_bars replace
-setblock 1259 -43 651 minecraft:iron_bars replace
-setblock 1259 -42 651 minecraft:iron_bars replace
+setblock 1259 -45 651 minecraft:water replace
+setblock 1259 -44 651 minecraft:air replace
+setblock 1259 -43 651 minecraft:air replace
+setblock 1259 -42 651 minecraft:air replace
 
-setblock 1260 -45 651 minecraft:iron_bars replace
-setblock 1260 -44 651 minecraft:iron_bars replace
-setblock 1260 -43 651 minecraft:iron_bars replace
-setblock 1260 -42 651 minecraft:iron_bars replace
+setblock 1260 -45 651 minecraft:water replace
+setblock 1260 -44 651 minecraft:air replace
+setblock 1260 -43 651 minecraft:air replace
+setblock 1260 -42 651 minecraft:air replace
 
-setblock 1260 -45 652 minecraft:iron_bars replace
-setblock 1260 -44 652 minecraft:iron_bars replace
-setblock 1260 -43 652 minecraft:iron_bars replace
-setblock 1260 -42 652 minecraft:iron_bars replace
+setblock 1260 -45 652 minecraft:water replace
+setblock 1260 -44 652 minecraft:air replace
+setblock 1260 -43 652 minecraft:air replace
+setblock 1260 -42 652 minecraft:air replace
 
-# Spawn solid vertical gate blocks at right spillway (Y=-45 to Y=-42)
-setblock 1293 -45 665 minecraft:iron_bars replace
-setblock 1293 -44 665 minecraft:iron_bars replace
-setblock 1293 -43 665 minecraft:iron_bars replace
-setblock 1293 -42 665 minecraft:iron_bars replace
+# Spawn solid vertical gate blocks at right spillway (Y=-45 to Y=-42) - Open at start (Y=-45 water, Y=-44..-42 air)
+setblock 1293 -45 665 minecraft:water replace
+setblock 1293 -44 665 minecraft:air replace
+setblock 1293 -43 665 minecraft:air replace
+setblock 1293 -42 665 minecraft:air replace
 
-setblock 1294 -45 665 minecraft:iron_bars replace
-setblock 1294 -44 665 minecraft:iron_bars replace
-setblock 1294 -43 665 minecraft:iron_bars replace
-setblock 1294 -42 665 minecraft:iron_bars replace
+setblock 1294 -45 665 minecraft:water replace
+setblock 1294 -44 665 minecraft:air replace
+setblock 1294 -43 665 minecraft:air replace
+setblock 1294 -42 665 minecraft:air replace
 
-setblock 1295 -45 665 minecraft:iron_bars replace
-setblock 1295 -44 665 minecraft:iron_bars replace
-setblock 1295 -43 665 minecraft:iron_bars replace
-setblock 1295 -42 665 minecraft:iron_bars replace
+setblock 1295 -45 665 minecraft:water replace
+setblock 1295 -44 665 minecraft:air replace
+setblock 1295 -43 665 minecraft:air replace
+setblock 1295 -42 665 minecraft:air replace
 
-setblock 1295 -45 666 minecraft:iron_bars replace
-setblock 1295 -44 666 minecraft:iron_bars replace
-setblock 1295 -43 666 minecraft:iron_bars replace
-setblock 1295 -42 666 minecraft:iron_bars replace
+setblock 1295 -45 666 minecraft:water replace
+setblock 1295 -44 666 minecraft:air replace
+setblock 1295 -43 666 minecraft:air replace
+setblock 1295 -42 666 minecraft:air replace
 
-setblock 1296 -45 666 minecraft:iron_bars replace
-setblock 1296 -44 666 minecraft:iron_bars replace
-setblock 1296 -43 666 minecraft:iron_bars replace
-setblock 1296 -42 666 minecraft:iron_bars replace
+setblock 1296 -45 666 minecraft:water replace
+setblock 1296 -44 666 minecraft:air replace
+setblock 1296 -43 666 minecraft:air replace
+setblock 1296 -42 666 minecraft:air replace
 
-setblock 1297 -45 666 minecraft:iron_bars replace
-setblock 1297 -44 666 minecraft:iron_bars replace
-setblock 1297 -43 666 minecraft:iron_bars replace
-setblock 1297 -42 666 minecraft:iron_bars replace
+setblock 1297 -45 666 minecraft:water replace
+setblock 1297 -44 666 minecraft:air replace
+setblock 1297 -43 666 minecraft:air replace
+setblock 1297 -42 666 minecraft:air replace
 
 # Spawn debris blockages (clogs) as moss blocks
 setblock 1272 -51 655 minecraft:moss_block replace
@@ -111,9 +111,9 @@ setblock 1277 -52 658 minecraft:moss_block replace
 setblock 1282 -52 660 minecraft:moss_block replace
 
 # Summon glowing block display guides (lime stained glass, zero hitbox, glowing) - ONLY highlighting the clogs!
-summon block_display 1272 -51 655 {Tags:["sr_guide","sr_guide_clog1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1277 -52 658 {Tags:["sr_guide","sr_guide_clog2"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1282 -52 660 {Tags:["sr_guide","sr_guide_clog3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1272.0 -51.0 655.0 {Tags:["sr_guide","sr_guide_clog1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b,transformation:{scale:[1.01f,1.01f,1.01f],translation:[-0.005f,-0.005f,-0.005f]}}
+summon block_display 1277.0 -52.0 658.0 {Tags:["sr_guide","sr_guide_clog2"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b,transformation:{scale:[1.01f,1.01f,1.01f],translation:[-0.005f,-0.005f,-0.005f]}}
+summon block_display 1282.0 -52.0 660.0 {Tags:["sr_guide","sr_guide_clog3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b,transformation:{scale:[1.01f,1.01f,1.01f],translation:[-0.005f,-0.005f,-0.005f]}}
 
 # Ensure the outline team exists and color is green
 team add sd2_green "Green Outline"
@@ -133,7 +133,7 @@ bossbar set minecraft:sr_bossbar name {"text":"Time Remaining!","color":"red"}
 # Screen Titles
 title @a times 10 60 10
 title @a title {"text":"SPILLWAY REPAIR!","color":"red","bold":true}
-title @a subtitle {"text":"Repair the dam and release the water!","color":"yellow"}
+title @a subtitle {"text":"Repair the dam and close the gates!","color":"yellow"}
 
 # Chat Message
 tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Level started! Clear the 3 clogs (highlighted in green), place the red cogwheel in the control slot on the shore at (1267, -52, 676), flip the generator switch at (1268, -52, 676), and pull the main lever at (1269, -52, 676).","color":"white"}]

@@ -24,4 +24,4 @@ title @a title {"text":"DAM OVERFLOWED!","color":"red","bold":true}
 title @a subtitle {"text":"The town has flooded!","color":"yellow"}
 
 # Send chat announcement
-tellraw @a [{"text":"[Spillway Repair] ","color":"red"},{"text":"Failure! The dam overflowed before you could open the spillway gate. The level will reset in 10 seconds.","color":"yellow"}]
+tellraw @a [{"text":"[Spillway Repair] ","color":"red"},{"text":"Failure! The dam overflowed before you could close the spillway gates. The level will reset in 10 seconds.","color":"yellow"}]

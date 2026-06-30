@@ -5,6 +5,7 @@ scoreboard objectives add gp_completed dummy "Completed Levels"
 scoreboard objectives add gp_victory dummy "Victory State"
 scoreboard objectives add return_to_lobby trigger "Return to Lobby Trigger"
 scoreboard objectives add show_tasks trigger "Show Tasks Trigger"
+scoreboard objectives add watch_video trigger "Watch Video Link Trigger"
 
 # Ensure objectives are set (only if not already set to prevent reset on load)
 execute unless score #sd_won gp_completed matches 0..1 run scoreboard players set #sd_won gp_completed 0
@@ -24,8 +25,13 @@ execute unless data storage arnis:progress sr run data modify storage arnis:prog
 # 3. Setup selection wall and clean up Guide NPC
 function game_progression:setup_npc
 
-# 4. Keep it always daytime
+# 4. Keep it always daytime and weather clear
 gamerule doDaylightCycle false
 time set day
+gamerule doWeatherCycle false
+weather clear
+
+# 5. Set default world spawn to Sandbag Defense start
+setworldspawn 1221 -54 706 180
 
 

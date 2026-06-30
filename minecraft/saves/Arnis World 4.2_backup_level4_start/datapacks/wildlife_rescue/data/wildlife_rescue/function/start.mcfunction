@@ -23,8 +23,8 @@ clear @a minecraft:lead
 clear @a minecraft:written_book
 
 # Give players tools and the book in exact hotbar slots
-item replace entity @a container.0 with written_book[written_book_content={title:"Swamp Checklist",author:"Swamp Ranger",pages:['{"text":"Wildlife Rescue (1/2):\\n\\nHelp! Floodwaters are\\nrising in the Jean\\nLafitte swamp.\\n\\nFind our stranded pets:\\n- 1 Cat\\n- 1 Dog\\n\\nLeash them and guide\\nthem across the bridge\\nto the grass pen!\\n\\n(Flip page ->)"}','{"text":"Wildlife Rescue (2/2):\\n\\nTips:\\n- Follow the meows\\n  and barks!\\n- You can leash and\\n  lead both animals\\n  at the same time!\\n- They have a glowing\\n  outline to help you\\n  see them through\\n  the trees."}']}] 1
-item replace entity @a container.1 with minecraft:lead 10
+item replace entity @a hotbar.0 with written_book[written_book_content={title:"Swamp Checklist",author:"Swamp Ranger",pages:['{"text":"Wildlife Rescue (1/2):\\n\\nHelp! Floodwaters are\\nrising in the Jean\\nLafitte swamp.\\n\\nFind our stranded pets:\\n- 1 Cat\\n- 1 Dog\\n\\nLeash them and guide\\nthem across the bridge\\nto the grass pen!\\n\\n(Flip page ->)"}','{"text":"Wildlife Rescue (2/2):\\n\\nTips:\\n- Follow the meows\\n  and barks!\\n- You can leash and\\n  lead both animals\\n  at the same time!\\n- They have a glowing\\n  outline to help you\\n  see them through\\n  the trees."}']}] 1
+item replace entity @a hotbar.1 with minecraft:lead 10
 
 # Teleport player to bridge starting point facing East (swamp side)
 tp @a 1259.5 -53 760.5 -90 0

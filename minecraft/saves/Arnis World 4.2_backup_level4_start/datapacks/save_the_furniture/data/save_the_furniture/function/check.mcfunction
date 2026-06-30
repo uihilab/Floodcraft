@@ -1,6 +1,6 @@
 # check.mcfunction - Evaluates win and loss conditions
 
-# Win condition: 12 items successfully stored in the attic chest
+# Win condition: 12 items successfully collected by players
 execute if score #secured_count sf_score matches 12 run function save_the_furniture:win
 
 # Lose condition: Time runs out (timer hits 0) and we haven't already won (state is still 1)

@@ -3,6 +3,7 @@ scoreboard objectives add sf_timer dummy "SF Timer"
 scoreboard objectives add sf_state dummy "SF State"
 scoreboard objectives add sf_score dummy "SF Score"
 scoreboard objectives add sf_deaths deathCount
+scoreboard objectives add sf_checklist dummy {"text":"Attic Checklist","color":"gold","bold":true}
 
 # Set up scoreboard constants
 scoreboard players set #20 sf_score 20

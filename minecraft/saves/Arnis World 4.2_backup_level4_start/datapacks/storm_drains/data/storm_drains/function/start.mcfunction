@@ -28,7 +28,7 @@ gamemode survival @a
 clear @a
 
 # Give custom shears and guidebook
-item replace entity @a container.0 with written_book[written_book_content={title:"Drain Map",author:"City Manager",pages:['{"text":"Storm Drain Hunt!\\n\\nOh no! Leaves and trash are clogging our neighborhood storm drains, causing the streets to flood!\\n\\nCan you find and clear all 5 clogged drains?\\n\\n(Flip page ->)"}','{"text":"How to Play:\\n\\n- Look for the green glowing blocks!\\n- Break the trash to clear the clog.\\n- Clearing a clog drains the water from that street!\\n- Watch the timer!"}']}] 1
+item replace entity @a hotbar.0 with written_book[written_book_content={title:"Drain Map",author:"City Manager",pages:['{"text":"Storm Drain Hunt!\\n\\nOh no! Leaves and trash are clogging our neighborhood storm drains, causing the streets to flood!\\n\\nCan you find and clear all 5 clogged drains?\\n\\n(Flip page ->)"}','{"text":"How to Play:\\n\\n- Look for the green glowing blocks!\\n- Break the trash to clear the clog.\\n- Clearing a clog drains the water from that street!\\n- Watch the timer!"}']}] 1
 give @a minecraft:shears[minecraft:custom_name='{"text":"Clog Remover","color":"green","bold":true}',minecraft:lore=['{"text":"Use this to clear blockages","color":"gray"}','{"text":"from the storm drains!","color":"gray"}']] 1
 
 # Teleport player near the start sign/button (facing East)
@@ -110,28 +110,28 @@ setblock 1198 -54 755 minecraft:mud replace
 
 # Summon glowing block display guides (lime stained glass, zero hitbox, glowing)
 # Drain 1
-summon block_display 1070 -53 737 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1071 -53 737 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1070 -53 738 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1070 -53 739 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1070 -53 740 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1070.0 -53.0 737.0 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1071.0 -53.0 737.0 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1070.0 -53.0 738.0 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1070.0 -53.0 739.0 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1070.0 -53.0 740.0 {Tags:["sd2_guide","sd2_guide1"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
 
 # Drain 2
-summon block_display 1094 -53 672 {Tags:["sd2_guide","sd2_guide2"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1094.0 -53.0 672.0 {Tags:["sd2_guide","sd2_guide2"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
 
 # Drain 3
-summon block_display 1139 -53 781 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1140 -53 781 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1140 -53 782 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1139.0 -53.0 781.0 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1140.0 -53.0 781.0 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1140.0 -53.0 782.0 {Tags:["sd2_guide","sd2_guide3"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
 
 # Drain 4
-summon block_display 1155 -53 696 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1156 -53 696 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1157 -53 696 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1155.0 -53.0 696.0 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1156.0 -53.0 696.0 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1157.0 -53.0 696.0 {Tags:["sd2_guide","sd2_guide4"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
 
 # Drain 5
-summon block_display 1198 -53 754 {Tags:["sd2_guide","sd2_guide5"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
-summon block_display 1198 -53 755 {Tags:["sd2_guide","sd2_guide5"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1198.0 -53.0 754.0 {Tags:["sd2_guide","sd2_guide5"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
+summon block_display 1198.0 -53.0 755.0 {Tags:["sd2_guide","sd2_guide5"],block_state:{Name:"minecraft:lime_stained_glass"},Glowing:1b}
 
 # Join guides to green team for glowing outline color
 team join sd2_green @e[tag=sd2_guide]
