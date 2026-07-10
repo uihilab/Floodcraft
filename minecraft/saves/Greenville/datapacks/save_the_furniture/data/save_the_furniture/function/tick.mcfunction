@@ -1,7 +1,7 @@
 # tick.mcfunction - Runs every game tick (20 times per second)
 
 # If game is inactive (state = 0), check if the button is pressed to start the game
-execute if score #state sf_state matches 0 if block 712 -46 469 minecraft:pale_oak_button[powered=true] run function save_the_furniture:start
+execute if score #state sf_state matches 0 if block 712 -46 469 minecraft:dark_oak_button[powered=true] run function save_the_furniture:start
 
 # If game is active (state = 1), run active game tick
 execute if score #state sf_state matches 1 run function save_the_furniture:tick_active

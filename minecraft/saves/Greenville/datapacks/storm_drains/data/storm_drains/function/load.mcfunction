@@ -34,3 +34,7 @@ execute unless score #game_id sd2_game matches 0..1000 run scoreboard players se
 bossbar add minecraft:sd2_bossbar "Storm Drain Scavenger Hunt"
 
 tellraw @a [{"text":"[Storm Drains] ","color":"gold"},{"text":"Storm Drain scavenger hunt datapack loaded successfully!","color":"green"}]
+
+# Set start button and wall sign
+setblock 718 -45 459 minecraft:dark_oak_wall_sign[facing=west] replace
+data merge block 718 -45 459 {front_text:{messages:['{"text":"Storm","color":"gold","bold":true}','{"text":"Drains","color":"gold","bold":true}','{"text":"Right-click button","color":"dark_blue"}','{"text":"to start level!","color":"dark_blue"}']}}

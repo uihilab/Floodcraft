@@ -26,3 +26,7 @@ bossbar set minecraft:sf_bossbar visible false
 
 # Notify players
 tellraw @a [{"text":"[Save the Furniture] ","color":"gold"},{"text":"Datapack loaded successfully! Spruce button placed at 1308 -52 766.","color":"green"}]
+
+# Set start button and wall sign
+setblock 712 -45 469 minecraft:dark_oak_wall_sign[facing=west] replace
+data merge block 712 -45 469 {front_text:{messages:['{"text":"Save the","color":"dark_red","bold":true}','{"text":"Furniture","color":"dark_red","bold":true}','{"text":"Right-click button","color":"dark_blue"}','{"text":"to start level!","color":"dark_blue"}']}}
