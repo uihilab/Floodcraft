@@ -1,0 +1,17 @@
+setblock 653 -47 458 minecraft:fern replace
+setblock 653 -47 457 minecraft:cobweb replace
+setblock 653 -47 456 minecraft:dead_bush replace
+setblock 669 -47 502 minecraft:fern replace
+setblock 668 -47 502 minecraft:cobweb replace
+setblock 668 -47 503 minecraft:dead_bush replace
+setblock 667 -47 503 minecraft:short_grass replace
+setblock 667 -47 504 minecraft:fern replace
+setblock 714 -47 462 minecraft:fern replace
+setblock 714 -47 463 minecraft:cobweb replace
+setblock 762 -47 422 minecraft:fern replace
+setblock 762 -47 423 minecraft:cobweb replace
+setblock 677 -47 367 minecraft:fern replace
+setblock 678 -47 367 minecraft:cobweb replace
+setblock 679 -47 367 minecraft:dead_bush replace
+setblock 679 -47 366 minecraft:short_grass replace
+setblock 679 -47 365 minecraft:fern replace
