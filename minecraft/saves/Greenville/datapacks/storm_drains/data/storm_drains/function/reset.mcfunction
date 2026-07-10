@@ -2,6 +2,7 @@
 kill @e[type=item,distance=..300]
 kill @e[tag=sd2_guide]
 clear @a
+gamemode creative @a
 fill 750 -50 411 773 -46 435 minecraft:air replace minecraft:water
 fill 750 -47 411 773 -47 435 minecraft:air replace minecraft:structure_void
 setblock 762 -48 422 minecraft:mud replace

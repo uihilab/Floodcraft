@@ -17,7 +17,7 @@ playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1
 tellraw @a [{"text":"[Storm Drains] ","color":"gold"},{"text":"Congratulations! You cleared all 5 storm drains and saved the neighborhood from flooding! Keeping storm drains clean is a super important way to stop floods. Resetting in 10 seconds...","color":"green"}]
 
 # Return players to Creative mode
-gamemode creative @a
+
 
 # Hide progress Bossbar
 bossbar set minecraft:sd2_bossbar visible false

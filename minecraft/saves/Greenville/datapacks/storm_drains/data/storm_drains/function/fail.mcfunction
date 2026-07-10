@@ -17,7 +17,7 @@ playsound minecraft:entity.wither.death master @a ~ ~ ~ 1 0.8
 tellraw @a [{"text":"[Storm Drains] ","color":"gold"},{"text":"Time ran out! The streets are still flooded because the storm drains are blocked. Let's try again! Resetting in 10 seconds...","color":"red"}]
 
 # Return players to Creative mode
-gamemode creative @a
+
 
 # Hide progress Bossbar
 bossbar set minecraft:sd2_bossbar visible false
