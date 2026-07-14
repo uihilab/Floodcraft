@@ -525,10 +525,10 @@ execute as @e[type=!player,x=607,y=-48,z=224,dx=2,dy=2,dz=2,limit=1,sort=nearest
 
 # Teleport and assign active minigame tags
 tag @e[tag=citizen_1] add tent_npc_1
-tp @e[tag=citizen_1] 556 -42 404
+tp @e[tag=citizen_1] 556 -41 404
 tag @e[tag=citizen_2] add tent_npc_2
-tp @e[tag=citizen_2] 568 -42 385
+tp @e[tag=citizen_2] 568 -41 385
 tag @e[tag=citizen_3] add tent_npc_3
-tp @e[tag=citizen_3] 580 -41 374
+tp @e[tag=citizen_3] 580 -40 374
 tag @e[tag=citizen_4] add tent_npc_4
-tp @e[tag=citizen_4] 587 -42 351
+tp @e[tag=citizen_4] 587 -41 351
