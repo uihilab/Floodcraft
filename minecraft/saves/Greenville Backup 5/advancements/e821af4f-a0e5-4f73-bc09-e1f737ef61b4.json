@@ -2115,5 +2115,35 @@
     },
     "done": true
   },
+  "mcwroofs:recipes/bricks": {
+    "criteria": {
+      "has_planks": "2026-07-14 14:17:37 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_glazed_terracotta": {
+    "criteria": {
+      "has_black_terracotta": "2026-07-14 14:32:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2026-07-14 14:49:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2026-07-14 14:49:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-07-14 14:49:34 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }

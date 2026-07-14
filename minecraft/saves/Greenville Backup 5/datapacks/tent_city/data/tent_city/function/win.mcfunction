@@ -564,15 +564,15 @@ fill 599 -48 425 619 -43 445 minecraft:air replace minecraft:water
 fill 515 -48 370 535 -43 390 minecraft:air replace minecraft:water
 
 # Turn all dirt back to grass blocks in the water areas
-fill 495 -50 382 597 -45 480 minecraft:grass_block replace minecraft:dirt
-fill 527 -50 332 599 -45 444 minecraft:grass_block replace minecraft:dirt
-fill 560 -50 291 640 -45 427 minecraft:grass_block replace minecraft:dirt
-fill 582 -50 269 656 -45 398 minecraft:grass_block replace minecraft:dirt
+fill 485 -49 372 607 -48 490 minecraft:grass_block replace minecraft:dirt
+fill 517 -49 322 609 -48 454 minecraft:grass_block replace minecraft:dirt
+fill 550 -49 281 650 -48 437 minecraft:grass_block replace minecraft:dirt
+fill 572 -49 259 656 -48 408 minecraft:grass_block replace minecraft:dirt
 
-fill 495 -50 382 597 -45 480 minecraft:grass_block replace minecraft:coarse_dirt
-fill 527 -50 332 599 -45 444 minecraft:grass_block replace minecraft:coarse_dirt
-fill 560 -50 291 640 -45 427 minecraft:grass_block replace minecraft:coarse_dirt
-fill 582 -50 269 656 -45 398 minecraft:grass_block replace minecraft:coarse_dirt
+fill 485 -49 372 607 -48 490 minecraft:grass_block replace minecraft:coarse_dirt
+fill 517 -49 322 609 -48 454 minecraft:grass_block replace minecraft:coarse_dirt
+fill 550 -49 281 650 -48 437 minecraft:grass_block replace minecraft:coarse_dirt
+fill 572 -49 259 656 -48 408 minecraft:grass_block replace minecraft:coarse_dirt
 
 # Break the spruce boats immediately on win
 kill @e[type=minecraft:spruce_boat,x=550,y=-42,z=350,distance=..150]
