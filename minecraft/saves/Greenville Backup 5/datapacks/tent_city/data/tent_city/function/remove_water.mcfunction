@@ -563,3 +563,8 @@ fill 495 -50 382 597 -45 480 minecraft:grass_block replace minecraft:dirt
 fill 527 -50 332 599 -45 444 minecraft:grass_block replace minecraft:dirt
 fill 560 -50 291 640 -45 427 minecraft:grass_block replace minecraft:dirt
 fill 582 -50 269 656 -45 398 minecraft:grass_block replace minecraft:dirt
+
+fill 495 -50 382 597 -45 480 minecraft:grass_block replace minecraft:coarse_dirt
+fill 527 -50 332 599 -45 444 minecraft:grass_block replace minecraft:coarse_dirt
+fill 560 -50 291 640 -45 427 minecraft:grass_block replace minecraft:coarse_dirt
+fill 582 -50 269 656 -45 398 minecraft:grass_block replace minecraft:coarse_dirt
