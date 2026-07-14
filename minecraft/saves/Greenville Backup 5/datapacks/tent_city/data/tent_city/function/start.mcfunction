@@ -506,10 +506,6 @@ tellraw @a ["",{"text":"[Tent City] ","color":"gold"},{"text":"Flooding the crev
 scoreboard players set @a tent_score 0
 
 # Setup NPCs
-setblock 546 -43 418 minecraft:oak_slab[type=top,waterlogged=true] replace
-setblock 574 -43 374 minecraft:oak_slab[type=top,waterlogged=true] replace
-setblock 601 -43 339 minecraft:oak_slab[type=top,waterlogged=true] replace
-setblock 615 -43 308 minecraft:oak_slab[type=top,waterlogged=true] replace
 # Clear any old citizen tags
 tag @e[type=!player] remove citizen_1
 tag @e[type=!player] remove citizen_2
@@ -529,10 +525,10 @@ execute as @e[type=!player,x=607,y=-48,z=224,dx=2,dy=2,dz=2,limit=1,sort=nearest
 
 # Teleport and assign active minigame tags
 tag @e[tag=citizen_1] add tent_npc_1
-tp @e[tag=citizen_1] 546 -42 418
+tp @e[tag=citizen_1] 556 -42 404
 tag @e[tag=citizen_2] add tent_npc_2
-tp @e[tag=citizen_2] 574 -42 374
+tp @e[tag=citizen_2] 568 -42 385
 tag @e[tag=citizen_3] add tent_npc_3
-tp @e[tag=citizen_3] 601 -42 339
+tp @e[tag=citizen_3] 580 -41 374
 tag @e[tag=citizen_4] add tent_npc_4
-tp @e[tag=citizen_4] 615 -42 308
+tp @e[tag=citizen_4] 587 -42 351
