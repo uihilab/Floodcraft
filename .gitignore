@@ -1,0 +1,11 @@
+# Ignore API configuration files containing keys
+**/creaturechat.json
+creaturechat.json
+
+# Ignore Minecraft lock files
+**/session.lock
+session.lock
+
+# Ignore macOS system files
+**/.DS_Store
+.DS_Store
