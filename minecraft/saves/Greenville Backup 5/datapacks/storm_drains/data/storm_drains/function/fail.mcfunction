@@ -21,3 +21,10 @@ tellraw @a [{"text":"[Storm Drains] ","color":"gold"},{"text":"Time ran out! The
 
 # Hide progress Bossbar
 bossbar set minecraft:sd2_bossbar visible false
+
+# Guide NPC failure encouragement
+tellraw @a [{"text":"[Guide] ","color":"gold","bold":true},{"text":"Oh no! The drains are still clogged. Let's try again!","color":"white"}]
+
+# Set guide state for 5-second failure teleport delay
+scoreboard players set #guide guide_state 23
+scoreboard players set #transition_timer guide_state 140

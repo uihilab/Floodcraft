@@ -9,7 +9,7 @@ title @a title {"text":"YOU WON!","color":"green","bold":true}
 title @a subtitle {"text":"You helped flood-proof the town!","color":"yellow"}
 
 # Chat message
-tellraw @a [{"text":"[Arnis Town Master] ","color":"gold"},{"text":"Congratulations! You have completed all 5 tasks and successfully flood-proofed the entire town! You are a hero!","color":"green"}]
+tellraw @a [{"text":"[System] ","color":"gold"},{"text":"Congratulations! You have completed all 5 tasks and successfully flood-proofed the entire town! You are a hero!","color":"green"}]
 
 # Play challenge complete sounds
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1.5 1.0

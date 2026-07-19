@@ -7,8 +7,8 @@ scoreboard players set #state sd2_state 2
 scoreboard players set #cooldown sd2_timer 200
 
 # Victory titles
-title @a title {"text":"VICTORY!","color":"green","bold":true}
-title @a subtitle {"text":"All storm drains successfully cleared!","color":"yellow"}
+title @a title {"text":"LEVEL CLEARED!","color":"green","bold":true}
+title @a subtitle {"text":"Follow the path to Sandbag Defense!","color":"yellow"}
 
 # Victory sound effect
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1
@@ -26,3 +26,7 @@ bossbar set minecraft:sd2_bossbar visible false
 scoreboard players set #sd2_won gp_completed 1
 data modify storage arnis:progress sd2 set value "Storm Drains (Already done!)"
 
+# Make Guide walk to Sandbag Defense start button
+scoreboard players set #guide guide_state 13
+scoreboard players set #transition_timer guide_state 240
+tellraw @a [{"text":"[Guide] ","color":"yellow"},{"text":"Follow the path to the Sandbag Defense level!","color":"green"}]

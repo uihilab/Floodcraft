@@ -25,3 +25,10 @@ title @a subtitle {"text":"The town has flooded!","color":"yellow"}
 
 # Send chat announcement
 tellraw @a [{"text":"[Spillway Repair] ","color":"red"},{"text":"Failure! The dam overflowed before you could close the spillway gates. The level will reset in 10 seconds.","color":"yellow"}]
+
+# Guide NPC failure encouragement
+tellraw @a [{"text":"[Guide] ","color":"gold","bold":true},{"text":"The spillway gates failed! Let's try to repair it again!","color":"white"}]
+
+# Set guide state for 5-second failure teleport delay
+scoreboard players set #guide guide_state 29
+scoreboard players set #transition_timer guide_state 140

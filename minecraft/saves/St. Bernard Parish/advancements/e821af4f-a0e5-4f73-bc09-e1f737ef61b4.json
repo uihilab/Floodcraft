@@ -2093,12 +2093,6 @@
     },
     "done": true
   },
-  "creaturechat:ice_breaker": {
-    "criteria": {
-      "triggered": "2026-06-18 13:24:12 -0500"
-    },
-    "done": true
-  },
   "creaturechat:first_impressions": {
     "criteria": {
       "triggered": "2026-06-18 13:24:12 -0500"
@@ -2150,6 +2144,12 @@
   "minecraft:recipes/combat/arrow": {
     "criteria": {
       "has_feather": "2026-06-23 13:30:18 -0500"
+    },
+    "done": true
+  },
+  "mcwroofs:recipes/spruce_planks": {
+    "criteria": {
+      "has_planks": "2026-07-16 18:22:32 -0500"
     },
     "done": true
   },

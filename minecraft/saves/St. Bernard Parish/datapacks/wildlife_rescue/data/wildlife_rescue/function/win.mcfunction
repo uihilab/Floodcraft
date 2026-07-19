@@ -28,3 +28,8 @@ bossbar set minecraft:wr_bossbar visible false
 # Update game progression completion state
 scoreboard players set #wr_won gp_completed 1
 data modify storage arnis:progress wr set value "Wildlife Rescue (Already done!)"
+
+# Make Guide transition to Save the Furniture
+scoreboard players set #guide guide_state 15
+scoreboard players set #transition_timer guide_state 240
+tellraw @a [{"text":"[Guide] ","color":"gold"},{"text":"Follow the path to the Save the Furniture level!","color":"green"}]

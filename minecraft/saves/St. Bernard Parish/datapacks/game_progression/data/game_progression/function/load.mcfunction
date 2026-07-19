@@ -25,11 +25,12 @@ execute unless data storage arnis:progress sr run data modify storage arnis:prog
 # 3. Setup selection wall and clean up Guide NPC
 function game_progression:setup_npc
 
-# 4. Keep it always daytime and weather clear
+# 4. Keep it always daytime and weather clear, disable death messages
 gamerule doDaylightCycle false
 time set day
 gamerule doWeatherCycle false
 weather clear
+gamerule showDeathMessages false
 
 # 5. Set default world spawn to Sandbag Defense start
 setworldspawn 1221 -54 706 180

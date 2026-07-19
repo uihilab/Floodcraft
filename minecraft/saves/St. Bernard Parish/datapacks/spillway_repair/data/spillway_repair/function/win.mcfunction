@@ -23,11 +23,14 @@ playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1.0 1.0
 
 # Display victory titles
 title @a title {"text":"DAM REPAIRED!","color":"green","bold":true}
-title @a subtitle {"text":"The spillway gates are closing!","color":"yellow"}
+title @a subtitle {"text":"The gates are closing! St. Bernard Parish is saved!","color":"yellow"}
 
 # Send chat announcement
-tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Victory! You successfully repaired the spillway and closed the gates. The flood has been stopped!","color":"green"}]
+tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Victory! You successfully repaired the spillway and closed the gates. The flood has been stopped! St. Bernard Parish is saved!","color":"green"}]
 
 # Update game progression completion state
 scoreboard players set #sr_won gp_completed 1
 data modify storage arnis:progress sr set value "Spillway Repair (Already done!)"
+scoreboard players set #guide guide_state 19
+scoreboard players set #transition_timer guide_state 240
+tellraw @a [{"text":"[Guide] ","color":"gold"},{"text":"Amazing job! You have completed all levels! St. Bernard Parish is saved!","color":"green"}]

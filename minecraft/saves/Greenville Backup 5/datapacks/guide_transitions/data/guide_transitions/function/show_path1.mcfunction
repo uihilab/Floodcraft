@@ -1,0 +1,27 @@
+# show_path1.mcfunction - Renders path particles
+particle minecraft:happy_villager 708 -46.8 468 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 708 -46.8 468 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 708 -46.8 467 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 708 -46.8 467 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 709 -46.8 466 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 709 -46.8 466 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 710 -46.8 465 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 710 -46.8 465 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 710 -46.8 464 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 710 -46.8 464 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 711 -46.8 463 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 711 -46.8 463 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 712 -46.8 462 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 712 -46.8 462 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 713 -46.8 461 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 713 -46.8 461 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 714 -47.8 461 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 714 -47.8 461 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 714 -46.8 460 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 714 -46.8 460 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 715 -46.8 459 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 715 -46.8 459 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 708 -46.8 469 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 708 -46.8 469 0.1 0.1 0.1 0.01 3
+particle minecraft:happy_villager 709 -46.8 470 0.1 0.1 0.1 0.01 2
+particle minecraft:glow 709 -46.8 470 0.1 0.1 0.1 0.01 3

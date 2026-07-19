@@ -26,3 +26,7 @@ bossbar set minecraft:sd2_bossbar visible false
 scoreboard players set #sd2_won gp_completed 1
 data modify storage arnis:progress sd2 set value "Storm Drains (Already done!)"
 
+# Make Guide transition to Wildlife Rescue
+scoreboard players set #guide guide_state 13
+scoreboard players set #transition_timer guide_state 240
+tellraw @a [{"text":"[Guide] ","color":"gold"},{"text":"Follow the path to the Wildlife Rescue level!","color":"green"}]

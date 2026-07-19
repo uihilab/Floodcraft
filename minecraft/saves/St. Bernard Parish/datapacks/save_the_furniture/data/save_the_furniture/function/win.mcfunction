@@ -25,3 +25,8 @@ scoreboard players set #cooldown sf_timer 200
 # Update game progression completion state
 scoreboard players set #sf_won gp_completed 1
 data modify storage arnis:progress sf set value "Save the Furniture (Already done!)"
+
+# Make Guide transition to Spillway Repair
+scoreboard players set #guide guide_state 17
+scoreboard players set #transition_timer guide_state 240
+tellraw @a [{"text":"[Guide] ","color":"gold"},{"text":"Follow the path to the Spillway Repair level!","color":"green"}]

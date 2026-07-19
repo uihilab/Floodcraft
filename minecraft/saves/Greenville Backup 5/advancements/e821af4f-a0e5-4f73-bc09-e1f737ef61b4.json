@@ -2085,12 +2085,6 @@
     },
     "done": true
   },
-  "creaturechat:ice_breaker": {
-    "criteria": {
-      "triggered": "2026-07-13 19:28:08 -0500"
-    },
-    "done": true
-  },
   "minecraft:husbandry/root": {
     "criteria": {
       "consumed_item": "2026-07-13 23:12:54 -0500"
@@ -2142,6 +2136,30 @@
   "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
     "criteria": {
       "has_smooth_stone": "2026-07-14 14:49:34 -0500"
+    },
+    "done": true
+  },
+  "creaturechat:lead_the_way": {
+    "criteria": {
+      "triggered": "2026-07-15 18:20:56 -0500"
+    },
+    "done": true
+  },
+  "creaturechat:guided_tour": {
+    "criteria": {
+      "triggered": "2026-07-15 18:20:59 -0500"
+    },
+    "done": true
+  },
+  "mcwroofs:recipes/stone": {
+    "criteria": {
+      "has_planks": "2026-07-15 18:21:58 -0500"
+    },
+    "done": true
+  },
+  "mcwroofs:recipes/stone_bricks": {
+    "criteria": {
+      "has_planks": "2026-07-15 18:21:58 -0500"
     },
     "done": true
   },
