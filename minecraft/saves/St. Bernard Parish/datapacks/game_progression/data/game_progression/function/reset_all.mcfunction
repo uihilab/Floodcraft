@@ -26,7 +26,7 @@ data remove storage arnis:progress sr
 tag @a remove talked_to_guide
 tag @a remove watched_sandbag_video
 advancement revoke @a only creaturechat:ice_breaker
-tp @a 1218.5 -53 704.5 180 0
+tp @a 1218.5 -53.0 707.5 180 0
 # tp @e[tag=ai_guide,limit=1] 1223.5 -53.0 706.5 180 0
 # easy_npc navigation set pos @e[tag=ai_guide,limit=1] 1223 -53 706
 scoreboard players set #guide guide_state 0

@@ -32,7 +32,7 @@ item replace entity @a hotbar.0 with written_book[written_book_content={title:"D
 give @a minecraft:shears[minecraft:custom_name='{"text":"Clog Remover","color":"green","bold":true}',minecraft:lore=['{"text":"Use this to clear blockages","color":"gray"}','{"text":"from the storm drains!","color":"gray"}']] 1
 
 # Teleport player near the start sign/button (facing East)
-tp @a 1207.5 -53.0 760.5 -90 0
+tp @a 1206.5 -53.0 759.5 -90 0
 
 # Re-place custom debris blocks at Y=-53 (curb level)
 # Drain 1

@@ -27,15 +27,15 @@ execute if score #transition_timer guide_state matches 1..240 run scoreboard pla
 
 # Teleports (after 2 seconds / 40 ticks pass, timer reaches 200)
 # L1 won -> teleport back to Sandbag Defense start
-execute if score #guide guide_state matches 11 if score #transition_timer guide_state matches 200 run tp @a 1218.5 -53.0 704.5 180 0
+execute if score #guide guide_state matches 11 if score #transition_timer guide_state matches 200 run tp @a 1218.5 -53.0 707.5 180 0
 # L2 won -> teleport back to Storm Drains start
-execute if score #guide guide_state matches 13 if score #transition_timer guide_state matches 200 run tp @a 1207.5 -53.0 760.5 -90 0
+execute if score #guide guide_state matches 13 if score #transition_timer guide_state matches 200 run tp @a 1206.5 -53.0 759.5 -90 0
 # L3 won -> teleport back to Wildlife Rescue start
-execute if score #guide guide_state matches 15 if score #transition_timer guide_state matches 200 run tp @a 1259.5 -53.0 760.5 -90 0
+execute if score #guide guide_state matches 15 if score #transition_timer guide_state matches 200 run tp @a 1259.5 -53.0 762.5 -90 0
 # L4 won -> teleport back to Save the Furniture start
-execute if score #guide guide_state matches 17 if score #transition_timer guide_state matches 200 run tp @a 1308.5 -53.0 764.5 -90 0
+execute if score #guide guide_state matches 17 if score #transition_timer guide_state matches 200 run tp @a 1306.5 -53.0 769.5 -90 0
 # L5 won -> teleport back to Spillway Repair start (Game finished)
-execute if score #guide guide_state matches 19 if score #transition_timer guide_state matches 200 run tp @a 1263.5 -53.0 677.5 90 0
+execute if score #guide guide_state matches 19 if score #transition_timer guide_state matches 200 run tp @a 1263.5 -52.0 679.5 90 0
 
 # Transition activations & titles (after 3 seconds / 60 ticks pass, timer reaches 180)
 # L1 won -> L2 transition active (State 11 -> 1)
@@ -124,15 +124,15 @@ execute if score #guide guide_state matches 21..29 run scoreboard players remove
 
 # Teleports (after 2 seconds / 40 ticks pass, timer reaches 100)
 # L1 fail -> teleport back to L1 start (Sandbag)
-execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 100 run tp @a 1218.5 -53.0 704.5 180 0
+execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 100 run tp @a 1218.5 -53.0 707.5 180 0
 # L2 fail -> teleport back to L2 start (Drains)
-execute if score #guide guide_state matches 23 if score #transition_timer guide_state matches 100 run tp @a 1207.5 -53.0 760.5 -90 0
+execute if score #guide guide_state matches 23 if score #transition_timer guide_state matches 100 run tp @a 1206.5 -53.0 759.5 -90 0
 # L3 fail -> teleport back to L3 start (Wildlife)
-execute if score #guide guide_state matches 25 if score #transition_timer guide_state matches 100 run tp @a 1259.5 -53.0 760.5 -90 0
+execute if score #guide guide_state matches 25 if score #transition_timer guide_state matches 100 run tp @a 1259.5 -53.0 762.5 -90 0
 # L4 fail -> teleport back to L4 start (Furniture)
-execute if score #guide guide_state matches 27 if score #transition_timer guide_state matches 100 run tp @a 1308.5 -53.0 764.5 -90 0
+execute if score #guide guide_state matches 27 if score #transition_timer guide_state matches 100 run tp @a 1306.5 -53.0 769.5 -90 0
 # L5 fail -> teleport back to L5 start (Spillway)
-execute if score #guide guide_state matches 29 if score #transition_timer guide_state matches 100 run tp @a 1263.5 -53.0 677.5 90 0
+execute if score #guide guide_state matches 29 if score #transition_timer guide_state matches 100 run tp @a 1263.5 -52.0 679.5 90 0
 
 # Reset state after 3 seconds / 60 ticks pass (timer reaches 80)
 execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 80 run scoreboard players set #guide guide_state 0
@@ -153,8 +153,8 @@ execute if score #guide guide_state matches 29 unless score #current_guide_dest 
 
 # === ACTION BAR LOCK HUD INDICATORS (St. Bernard - Bypassed if already completed) ===
 # Level 1 (Sandbag Defense button at 1219 -52 701)
-execute unless score #sd_won gp_completed matches 1 if entity @a[x=1219,y=-52,z=701,distance=..8,tag=watched_sandbag_video] run title @a[x=1219,y=-52,z=701,distance=..8] actionbar {"text":"Level Unlocked - Press the button to start!","color":"green"}
-execute unless score #sd_won gp_completed matches 1 if entity @a[x=1219,y=-52,z=701,distance=..8,tag=!watched_sandbag_video] run title @a[x=1219,y=-52,z=701,distance=..8] actionbar {"text":"Level Locked - Watch video to unlock!","color":"red"}
+execute if score #state sd_state matches 0 unless score #sd_won gp_completed matches 1 if entity @a[x=1219,y=-52,z=701,distance=..8,tag=watched_sandbag_video] run title @a[x=1219,y=-52,z=701,distance=..8] actionbar {"text":"Level Unlocked - Press the button to start!","color":"green"}
+execute if score #state sd_state matches 0 unless score #sd_won gp_completed matches 1 if entity @a[x=1219,y=-52,z=701,distance=..8,tag=!watched_sandbag_video] run title @a[x=1219,y=-52,z=701,distance=..8] actionbar {"text":"Level Locked - Watch video to unlock!","color":"red"}
 
 # === MULTI-NPC ACTIVE LEVEL SPAWN & CLEANUP SYSTEM ===
 

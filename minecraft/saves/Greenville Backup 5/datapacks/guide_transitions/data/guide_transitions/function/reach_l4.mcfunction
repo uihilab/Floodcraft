@@ -3,5 +3,5 @@ scoreboard players set #guide guide_state 6
 playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 1 1.2
 title @a subtitle {"text":"Reached Tent City Rescue! Press button to start.","color":"green"}
 
-# Prompt player to interact with the Guide
-tellraw @a [{"text":"[Guide] ","color":"yellow"},{"text":"This is the flooded neighborhood. Interact with me so I can unlock the rescue boat and explain how to save the citizens!","color":"white"}]
+# Prompt player to start the level
+tellraw @a [{"text":"[Guide] ","color":"yellow"},{"text":"This is the flooded neighborhood. Press the button when you're ready to get in the rescue boat and save the citizens!","color":"white"}]

@@ -25,7 +25,7 @@ setblock 517 -42 386 minecraft:barrel{Items:[{Slot:0b,id:"minecraft:potion",coun
 # Barrel 2: Ration Bread
 setblock 516 -42 386 minecraft:barrel{Items:[{Slot:0b,id:"minecraft:bread",count:1b},{Slot:1b,id:"minecraft:bread",count:1b},{Slot:2b,id:"minecraft:bread",count:1b},{Slot:3b,id:"minecraft:bread",count:1b},{Slot:4b,id:"minecraft:bread",count:1b},{Slot:5b,id:"minecraft:bread",count:1b},{Slot:6b,id:"minecraft:bread",count:1b},{Slot:7b,id:"minecraft:bread",count:1b},{Slot:8b,id:"minecraft:bread",count:1b},{Slot:9b,id:"minecraft:bread",count:1b}]} replace
 # Barrel 3: Canned Stew
-setblock 518 -42 386 minecraft:barrel{Items:[{Slot:0b,id:"minecraft:suspicious_stew",count:1b},{Slot:1b,id:"minecraft:suspicious_stew",count:1b},{Slot:2b,id:"minecraft:suspicious_stew",count:1b},{Slot:3b,id:"minecraft:suspicious_stew",count:1b},{Slot:4b,id:"minecraft:suspicious_stew",count:1b},{Slot:5b,id:"minecraft:suspicious_stew",count:1b},{Slot:6b,id:"minecraft:suspicious_stew",count:1b},{Slot:7b,id:"minecraft:suspicious_stew",count:1b},{Slot:8b,id:"minecraft:suspicious_stew",count:1b},{Slot:9b,id:"minecraft:suspicious_stew",count:1b}]} replace
+setblock 518 -42 386 minecraft:barrel{Items:[{Slot:0b,id:"minecraft:mushroom_stew",count:1b},{Slot:1b,id:"minecraft:mushroom_stew",count:1b},{Slot:2b,id:"minecraft:mushroom_stew",count:1b},{Slot:3b,id:"minecraft:mushroom_stew",count:1b},{Slot:4b,id:"minecraft:mushroom_stew",count:1b},{Slot:5b,id:"minecraft:mushroom_stew",count:1b},{Slot:6b,id:"minecraft:mushroom_stew",count:1b},{Slot:7b,id:"minecraft:mushroom_stew",count:1b},{Slot:8b,id:"minecraft:mushroom_stew",count:1b},{Slot:9b,id:"minecraft:mushroom_stew",count:1b}]} replace
 
 # Ensure all 4 citizens are in their tents
 tp @e[tag=citizen_1] 552 -42 316

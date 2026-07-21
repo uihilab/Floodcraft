@@ -240,7 +240,7 @@ item replace entity @a hotbar.0 with written_book[written_book_content={title:"D
 item replace entity @a hotbar.1 with minecraft:yellow_concrete[minecraft:can_place_on={blocks:["minecraft:stone_bricks","minecraft:mossy_stone_bricks","minecraft:cracked_stone_bricks","minecraft:chiseled_stone_bricks","minecraft:stone","minecraft:grass_block","minecraft:dirt","minecraft:short_grass","minecraft:tall_grass"]}] 10
  
 # Teleport player to the front of the house facing North (towards the front door)
-tp @a 1218.5 -53 704.5 180 0
+tp @a 1218.5 -53.0 707.5 180 0
  
 # Configure and show Boss Bar HUD overlay
 bossbar set minecraft:sd_bossbar visible true

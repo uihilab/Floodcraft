@@ -19,15 +19,15 @@ execute if score #transition_timer guide_state matches 1..240 run scoreboard pla
 
 # Trigger teleport when timer hits 200 (after 2 seconds / 40 ticks pass, with 10 seconds remaining)
 # L1 won -> L2 teleport
-execute if score #guide guide_state matches 11 if score #transition_timer guide_state matches 200 run tp @a 712.5 -46.0 471.5 180 0
+execute if score #guide guide_state matches 11 if score #transition_timer guide_state matches 200 run tp @a 707.5 -47.0 470.5 180 0
 # L2 won -> L3 teleport
 execute if score #guide guide_state matches 13 if score #transition_timer guide_state matches 200 run tp @a 714.5 -46.0 459.5 -90 0
 # L3 won -> L4 teleport
-execute if score #guide guide_state matches 15 if score #transition_timer guide_state matches 200 run tp @a 613.0 -48.0 545.0 180 0
+execute if score #guide guide_state matches 15 if score #transition_timer guide_state matches 200 run tp @a 610.5 -48.0 543.5 180 0
 # L4 won -> L5 teleport
 execute if score #guide guide_state matches 17 if score #transition_timer guide_state matches 200 run tp @a 542.0 -42.0 343.0 180 0
 # L5 won -> End Game teleport
-execute if score #guide guide_state matches 19 if score #transition_timer guide_state matches 200 run tp @a 518.0 -41.0 382.0 180 0
+execute if score #guide guide_state matches 19 if score #transition_timer guide_state matches 200 run tp @a 522.5 -42.0 381.5 180 0
 
 # Trigger Guide run and active transition state when timer hits 180 (after 3 seconds total)
 # L1 won -> L2 transition active (State 11 -> 1)
@@ -119,15 +119,15 @@ execute if score #guide guide_state matches 21..29 run scoreboard players remove
 
 # Teleports (after 2 seconds / 40 ticks, timer reaches 100)
 # L1 fail -> teleport back to L1 start (Furniture)
-execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 100 run tp @a 712.5 -46.0 471.5 180 0
+execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 100 run tp @a 707.5 -47.0 470.5 180 0
 # L2 fail -> teleport back to L2 start (Drains)
 execute if score #guide guide_state matches 23 if score #transition_timer guide_state matches 100 run tp @a 714.5 -46.0 459.5 -90 0
 # L3 fail -> teleport back to L3 start (Sandbag)
-execute if score #guide guide_state matches 25 if score #transition_timer guide_state matches 100 run tp @a 613.0 -48.0 545.0 180 0
+execute if score #guide guide_state matches 25 if score #transition_timer guide_state matches 100 run tp @a 610.5 -48.0 543.5 180 0
 # L4 fail -> teleport back to L4 start (Boat)
 execute if score #guide guide_state matches 27 if score #transition_timer guide_state matches 100 run tp @a 542.0 -42.0 343.0 180 0
 # L5 fail -> teleport back to L5 start (Camp)
-execute if score #guide guide_state matches 29 if score #transition_timer guide_state matches 100 run tp @a 518.0 -41.0 382.0 180 0
+execute if score #guide guide_state matches 29 if score #transition_timer guide_state matches 100 run tp @a 522.5 -42.0 381.5 180 0
 
 # Reset state after 3 seconds (timer reaches 80)
 execute if score #guide guide_state matches 21 if score #transition_timer guide_state matches 80 run scoreboard players set #guide guide_state 0
@@ -148,8 +148,8 @@ execute if score #guide guide_state matches 29 unless score #current_guide_dest 
 
 # === ACTION BAR LOCK HUD INDICATORS (Greenville - Bypassed if already completed) ===
 # Level 3 (Sandbag Defense button at 611 -47 546)
-execute unless score #sd_won gp_completed matches 1 if entity @a[x=611,y=-47,z=546,distance=..8,tag=watched_sandbag_video] run title @a[x=611,y=-47,z=546,distance=..8] actionbar {"text":"Level Unlocked - Press the button to start!","color":"green"}
-execute unless score #sd_won gp_completed matches 1 if entity @a[x=611,y=-47,z=546,distance=..8,tag=!watched_sandbag_video] run title @a[x=611,y=-47,z=546,distance=..8] actionbar {"text":"Level Locked - Watch video to unlock!","color":"red"}
+execute if score #state sd_state matches 0 unless score #sd_won gp_completed matches 1 if entity @a[x=611,y=-47,z=546,distance=..8,tag=watched_sandbag_video] run title @a[x=611,y=-47,z=546,distance=..8] actionbar {"text":"Level Unlocked - Press the button to start!","color":"green"}
+execute if score #state sd_state matches 0 unless score #sd_won gp_completed matches 1 if entity @a[x=611,y=-47,z=546,distance=..8,tag=!watched_sandbag_video] run title @a[x=611,y=-47,z=546,distance=..8] actionbar {"text":"Level Locked - Watch video to unlock!","color":"red"}
 
 
 # === MULTI-NPC ACTIVE LEVEL SPAWN & CLEANUP SYSTEM (Greenville) ===
@@ -181,8 +181,7 @@ execute if score #sd_won gp_completed matches 0 if entity @e[tag=guide_l4] run k
 execute if score #wr_won gp_completed matches 1 if entity @e[tag=guide_l4] run kill @e[tag=guide_l4]
 
 # --- LEVEL 5 (Relief Camp) ---
-# Active when wr_won is 1 and sr_won is 0
-execute if score #wr_won gp_completed matches 1 if score #sr_won gp_completed matches 0 unless entity @e[tag=guide_l5] run summon easy_npc:chicken 518.5 -41.0 382.5 {CustomName:'"Guide L5"',Tags:["guide_l5"],ObjectiveData:{ObjectiveDataSet:{objectives:[{Type:"LOOK_AT_PLAYER",Priority:1},{Type:"FLOAT",Priority:0}]},HasObjectives:1b,HasPlayerTarget:1b},Rotation:[-90f,0f]}
+# Active when wr_won is 1
+execute if score #wr_won gp_completed matches 1 unless entity @e[tag=guide_l5] run summon easy_npc:chicken 518.5 -41.0 382.5 {CustomName:'"Guide L5"',Tags:["guide_l5"],ObjectiveData:{ObjectiveDataSet:{objectives:[{Type:"LOOK_AT_PLAYER",Priority:1},{Type:"FLOAT",Priority:0}]},HasObjectives:1b,HasPlayerTarget:1b},Rotation:[-90f,0f]}
 # Cleanup if not active
 execute if score #wr_won gp_completed matches 0 if entity @e[tag=guide_l5] run kill @e[tag=guide_l5]
-execute if score #sr_won gp_completed matches 1 if entity @e[tag=guide_l5] run kill @e[tag=guide_l5]

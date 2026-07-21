@@ -1,5 +1,5 @@
 # Teleport player to Save the Furniture start button
-tp @a 1308.5 -53 764.5 -90 0
+tp @a 1306.5 -53.0 769.5 -90 0
 
 # Reset the return to lobby trigger
 scoreboard players set @a return_to_lobby 0

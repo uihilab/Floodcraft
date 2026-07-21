@@ -25,8 +25,9 @@ setblock 1219 -52 701 minecraft:spruce_button[facing=south,face=wall] replace
 setblock 1219 -51 701 minecraft:spruce_wall_sign[facing=south] replace
 data merge block 1219 -51 701 {front_text:{messages:['{"text":"Sandbag","color":"dark_green","bold":true}','{"text":"Defense","color":"dark_green","bold":true}','{"text":"Right-click button","color":"dark_blue"}','{"text":"to start level!","color":"dark_blue"}']}}
 
-# Force state to inactive (0) on load/reload to prevent getting stuck
+# Force state to inactive (0) and reset water on load/reload
 scoreboard players set #state sd_state 0
+function sandbag_defense:reset
 execute unless score #game_id sd_game matches 0..1000 run scoreboard players set #game_id sd_game 0
 
 # Register Bossbar

@@ -1,6 +1,13 @@
 # check_leaks.mcfunction - Checks if water has breached any of the 5 gaps
 scoreboard players set #breached sd_score 0
 
+# Check physical sandbag placement in the 5 perimeter gaps
+execute unless block 1204 -53 699 minecraft:yellow_concrete run scoreboard players set #breached sd_score 1
+execute unless block 1211 -53 682 minecraft:yellow_concrete run scoreboard players set #breached sd_score 1
+execute unless block 1218 -53 684 minecraft:yellow_concrete run scoreboard players set #breached sd_score 1
+execute unless block 1221 -53 703 minecraft:yellow_concrete run scoreboard players set #breached sd_score 1
+execute unless block 1228 -53 691 minecraft:yellow_concrete run scoreboard players set #breached sd_score 1
+
 # Gap 1 (West)
 execute if block 1204 -53 699 minecraft:water run scoreboard players set #breached sd_score 1
 execute if block 1204 -54 699 minecraft:water run scoreboard players set #breached sd_score 1

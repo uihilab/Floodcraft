@@ -9,9 +9,6 @@ scoreboard players set #cooldown sd_timer 100
 # Hide Bossbar
 bossbar set minecraft:sd_bossbar visible false
 
-# Flood the interior of the house completely (Y=-53 to Y=-50)
-fill 1213 -53 689 1223 -50 699 minecraft:water replace air
-
 # Display defeat screen titles based on breach location
 title @a title {"text":"LEVEL FAILED!","color":"red","bold":true}
 execute if score #breached sd_score matches 1.. run title @a subtitle {"text":"Water leaked through the sandbags!","color":"yellow"}

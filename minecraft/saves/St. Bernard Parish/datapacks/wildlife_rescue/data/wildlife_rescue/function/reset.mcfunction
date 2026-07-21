@@ -15,7 +15,7 @@ clear @a minecraft:written_book
 gamemode creative @a
 
 # Teleport players back to the bridge starting point if they lost
-execute if score #state wr_state matches 3 run tp @a 1259.5 -53 760.5 -90 0
+execute if score #state wr_state matches 3 run tp @a 1259.5 -53.0 762.5 -90 0
 
 # Restore starting button structure on the side railing
 setblock 1259 -53 759 minecraft:oak_planks replace

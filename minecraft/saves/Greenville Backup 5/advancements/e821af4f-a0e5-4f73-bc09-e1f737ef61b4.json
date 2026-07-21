@@ -2163,5 +2163,17 @@
     },
     "done": true
   },
+  "mcwroofs:recipes/birch_planks": {
+    "criteria": {
+      "has_planks": "2026-07-19 18:39:40 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sponge": {
+    "criteria": {
+      "has_wet_sponge": "2026-07-19 19:15:53 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }

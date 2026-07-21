@@ -27,7 +27,7 @@ item replace entity @a hotbar.0 with written_book[written_book_content={title:"S
 item replace entity @a hotbar.1 with minecraft:lead 10
 
 # Teleport player to bridge starting point facing East (swamp side)
-tp @a 1259.5 -53 760.5 -90 0
+tp @a 1259.5 -53.0 762.5 -90 0
 
 # Spawn 2 animals with glowing outlines and empty death loot tables (preventing drops)
 summon cat 1297 -53 810 {Tamed:1b,CustomName:'{"text":"Whiskers","color":"yellow"}',CustomNameVisible:1b,Glowing:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",variant:"minecraft:siamese",Tags:["wr_animal","wr_cat"]}

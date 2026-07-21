@@ -31,6 +31,8 @@ time set day
 gamerule doWeatherCycle false
 weather clear
 gamerule showDeathMessages false
+gamerule sendCommandFeedback false
+gamerule commandBlockOutput false
 
 # 5. Set default world spawn to Sandbag Defense start
 setworldspawn 1221 -54 706 180

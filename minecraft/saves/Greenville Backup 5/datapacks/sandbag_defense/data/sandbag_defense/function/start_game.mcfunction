@@ -8,7 +8,7 @@ clear @a
 gamemode adventure @a
 item replace entity @a hotbar.0 with written_book[written_book_content={title:"Defense Plan",author:"City Engineer",pages:['{"text":"Sandbag Defense:\\n\\nUh oh! The crew missed\\na few spots!\\n\\nTake the sandbags in\\nyour inventory and\\nrun around the house\\nto plug the 5 gaps\\nbefore the flood hits!\\n\\n(Flip page ->)"}','{"text":"Did you know?\\n\\nSandbags are cheap and\\neasy to deploy but\\nonly work for shallow\\nflooding.\\n\\nThey must form a\\ncontinuous line to\\nkeep the water out!"}']}] 1
 item replace entity @a hotbar.1 with minecraft:yellow_concrete[minecraft:can_place_on={blocks:["minecraft:stone_bricks","minecraft:mossy_stone_bricks","minecraft:cracked_stone_bricks","minecraft:chiseled_stone_bricks","minecraft:stone","minecraft:grass_block","minecraft:dirt","minecraft:short_grass","minecraft:tall_grass","minecraft:gray_concrete"]}] 10
-tp @a 613 -48 545 180 0
+tp @a 610.5 -48.0 543.5 180 0
 bossbar set minecraft:sd_bossbar visible true
 bossbar set minecraft:sd_bossbar players @a
 bossbar set minecraft:sd_bossbar max 700

@@ -57,9 +57,9 @@ execute if score #state relief_state matches 1 if score #c2_bread relief_vars ma
 execute if score #state relief_state matches 1 if score #c3_done relief_vars matches 0 at @e[tag=citizen_3] run tp @e[tag=c3_holo,distance=..3] ~0.8 ~1.5 ~
 
 # 1. Stew delivery
-execute if score #state relief_state matches 1 if score #c3_stew relief_vars matches 1.. as @e[tag=citizen_3] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}] at @s run scoreboard players remove #c3_stew relief_vars 1
-execute if score #state relief_state matches 1 as @e[tag=citizen_3] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}] at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 1
-execute if score #state relief_state matches 1 as @e[tag=citizen_3] at @s run kill @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}]
+execute if score #state relief_state matches 1 if score #c3_stew relief_vars matches 1.. as @e[tag=citizen_3] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}] at @s run scoreboard players remove #c3_stew relief_vars 1
+execute if score #state relief_state matches 1 as @e[tag=citizen_3] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}] at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 1
+execute if score #state relief_state matches 1 as @e[tag=citizen_3] at @s run kill @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}]
 
 # 2. Water delivery
 execute if score #state relief_state matches 1 if score #c3_water relief_vars matches 1.. as @e[tag=citizen_3] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}}] at @s run scoreboard players remove #c3_water relief_vars 1
@@ -82,9 +82,9 @@ execute if score #state relief_state matches 1 if score #c3_water relief_vars ma
 execute if score #state relief_state matches 1 if score #c4_done relief_vars matches 0 at @e[tag=citizen_4] run tp @e[tag=c4_holo,distance=..3] ~0.8 ~1.5 ~
 
 # 1. Stew delivery
-execute if score #state relief_state matches 1 if score #c4_stew relief_vars matches 1.. as @e[tag=citizen_4] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}] at @s run scoreboard players remove #c4_stew relief_vars 1
-execute if score #state relief_state matches 1 as @e[tag=citizen_4] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}] at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 1
-execute if score #state relief_state matches 1 as @e[tag=citizen_4] at @s run kill @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:suspicious_stew"}}]
+execute if score #state relief_state matches 1 if score #c4_stew relief_vars matches 1.. as @e[tag=citizen_4] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}] at @s run scoreboard players remove #c4_stew relief_vars 1
+execute if score #state relief_state matches 1 as @e[tag=citizen_4] at @s as @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}] at @s run playsound minecraft:entity.generic.eat master @a ~ ~ ~ 1 1
+execute if score #state relief_state matches 1 as @e[tag=citizen_4] at @s run kill @e[type=item,distance=..2,limit=1,nbt={Item:{id:"minecraft:mushroom_stew"}}]
 
 # 2. Hologram Name updates
 execute if score #state relief_state matches 1 if score #c4_stew relief_vars matches 2 run data merge entity @e[tag=c4_holo,limit=1] {text:'{"text":"Needs: 2 Canned Stew","color":"yellow"}'}

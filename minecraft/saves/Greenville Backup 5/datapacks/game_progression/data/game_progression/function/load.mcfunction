@@ -19,3 +19,5 @@ time set day
 gamerule doWeatherCycle false
 weather clear
 gamerule showDeathMessages false
+gamerule sendCommandFeedback false
+gamerule commandBlockOutput false

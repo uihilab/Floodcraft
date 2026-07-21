@@ -1,5 +1,5 @@
 # Teleport player to Storm Drains start button
-tp @a 1207.5 -53.0 760.5 -90 0
+tp @a 1206.5 -53.0 759.5 -90 0
 
 # Reset the return to lobby trigger
 scoreboard players set @a return_to_lobby 0

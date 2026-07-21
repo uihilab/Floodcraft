@@ -26,15 +26,15 @@ gamemode adventure @a
 clear @a
 
 # Give custom Netherite Pickaxe, Depth Strider boots, and guidebook
-item replace entity @a hotbar.0 with written_book[written_book_content={title:"Spillway Manual",author:"Guide",pages:['{"text":"Spillway Repair!\\n\\nOh no! The spillway gates are jammed open and water is pouring out uncontrollably!\\n\\nWe need to close the gates to stop the flood!\\n\\n(Flip page ->)"}','{"text":"How to Repair:\\n\\n1. Swim down to the gate and clear the 3 clog blocks using your pickaxe.\\n2. Open the toolbox chest on the shore, grab the red cogwheel, and place it on the control panel slot at (1267, -52, 676).\\n3. Flip the generator switch next to it at (1268, -52, 676)."}','{"text":"4. Once all 3 tasks are complete, pull the main lever at (1269, -52, 676) to close the gates and save the town!\\n\\nFollow the glowing green highlights on the clogs!"}']}] 1
+item replace entity @a hotbar.0 with written_book[written_book_content={title:"Spillway Manual",author:"Guide",pages:['{"text":"§6§lSpillway Repair!§r\\n\\nOh no! The spillway gates are stuck open and water is flowing into the town!\\n\\nWork together to fix the spillway and save the day!\\n\\n(Flip page ->)"}','{"text":"§6§lHow to Fix It:§r\\n\\n1. Swim underwater and break the 3 glowing green clogs with your pickaxe.\\n\\n2. Open the toolbox chest on the shore, pick up the §c§lMissing Part§r, and place it into the control panel slot."}','{"text":"3. Flip the two switches on the control panel on the shore to close the gates and stop the flood!"}']}] 1
 give @a minecraft:netherite_pickaxe[minecraft:custom_name='{"text":"Debris Cleaver","color":"gold","bold":true}',minecraft:lore=['{"text":"Use this to clear the moss block clogs","color":"gray"}','{"text":"jamming the spillway gate!","color":"gray"}'],minecraft:enchantments={levels:{"minecraft:efficiency":5}},minecraft:can_break={blocks:["minecraft:moss_block","minecraft:red_concrete"]}] 1
 item replace entity @a armor.feet with minecraft:netherite_boots[minecraft:enchantments={levels:{"minecraft:depth_strider":3}}] 1
 
 # Teleport player command removed - player stays at starting post
 
-# Spawn toolbox chest containing the Spillway Cogwheel (Red Concrete)
+# Spawn toolbox chest containing the Missing Part (Red Concrete)
 setblock 1265 -52 676 minecraft:chest replace
-item replace block 1265 -52 676 container.0 with minecraft:red_concrete[minecraft:custom_name='{"text":"Spillway Cogwheel","color":"red","bold":true}',minecraft:lore=['{"text":"Place this onto the control panel","color":"gray"}','{"text":"at (1267, -52, 676)!","color":"gray"}'],minecraft:can_place_on={blocks:["minecraft:gray_concrete"]}] 1
+item replace block 1265 -52 676 container.0 with minecraft:red_concrete[minecraft:custom_name='{"text":"Missing Part","color":"red","bold":true}',minecraft:lore=['{"text":"Place this onto the control panel","color":"gray"}','{"text":"slot on the shore!","color":"gray"}'],minecraft:can_place_on={blocks:["minecraft:gray_concrete"]}] 1
 
 # Setup control panel and generator switch (separated layout next to start button)
 setblock 1267 -53 676 minecraft:gray_concrete replace
@@ -136,7 +136,7 @@ title @a title {"text":"SPILLWAY REPAIR!","color":"red","bold":true}
 title @a subtitle {"text":"Repair the dam and close the gates!","color":"yellow"}
 
 # Chat Message
-tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Level started! Clear the 3 clogs (highlighted in green), place the red cogwheel in the control slot on the shore at (1267, -52, 676), flip the generator switch at (1268, -52, 676), and pull the main lever at (1269, -52, 676).","color":"white"}]
+tellraw @a [{"text":"[Spillway Repair] ","color":"gold"},{"text":"Level started! Clear the 3 clogs (highlighted in green), place the Missing Part into the control panel slot on the shore, flip the generator switch, and pull the main lever to close the gates!","color":"white"}]
 
 # Play Alarm Sound
 playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 1 1

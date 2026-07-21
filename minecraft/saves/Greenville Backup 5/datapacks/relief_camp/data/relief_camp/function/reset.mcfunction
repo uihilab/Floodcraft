@@ -1,6 +1,5 @@
 # reset.mcfunction - Reset Level 5 Relief Camp
 scoreboard players set #state relief_state 0
-function tent_city:remove_water
 gamerule doDaylightCycle true
 
 # Remove supply table and barrels
@@ -23,7 +22,7 @@ kill @e[tag=c4_holo]
 # Clear inventory of food and guide book
 clear @a minecraft:bread
 clear @a minecraft:potion
-clear @a minecraft:suspicious_stew
+clear @a minecraft:mushroom_stew
 clear @a minecraft:written_book
 
 gamemode creative @a

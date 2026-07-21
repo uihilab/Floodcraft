@@ -1,5 +1,5 @@
 # Teleport player to Sandbag Defense start button
-tp @a 1218.5 -53 704.5 180 0
+tp @a 1218.5 -53.0 707.5 180 0
 
 # Reset the return to lobby trigger just in case
 scoreboard players set @a return_to_lobby 0

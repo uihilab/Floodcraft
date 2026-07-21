@@ -4,15 +4,11 @@ clear @a
 gamemode creative @a
 bossbar set minecraft:sd_bossbar visible false
 
-# Clear sandbag wall
+# 1. Clear all water FIRST
+fill 600 -49 540 624 -45 572 minecraft:air replace minecraft:water
+
+# 2. Clear sandbag wall
 fill 600 -49 540 624 -45 572 minecraft:air replace minecraft:yellow_concrete
-# Clear containment barriers
 
-# Clear all water in the area
-fill 600 -49 540 600 -48 572 minecraft:air replace minecraft:structure_void
-fill 624 -49 540 624 -48 572 minecraft:air replace minecraft:structure_void
-fill 600 -49 540 624 -48 540 minecraft:air replace minecraft:structure_void
-fill 600 -49 572 624 -48 572 minecraft:air replace minecraft:structure_void
-
-# Clear all water in the area
-fill 600 -49 540 624 -48 572 minecraft:air replace minecraft:water
+# 3. Clear containment barriers
+fill 600 -49 540 624 -45 572 minecraft:air replace minecraft:structure_void
