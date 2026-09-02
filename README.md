@@ -1,7 +1,7 @@
 # FloodCraft
 ### An Educational Flood Mitigation Game for K-12 Students in Minecraft
 
-Developed by the [Hydroinformatics Lab (HILab) at Tulane University](https://hydroinformatics.tulane.edu/)  
+Developed by the [Hydroinformatics Lab (IHILab) at Tulane University](https://hydroinformatics.tulane.edu/)  
 *Originally developed in collaboration with the University of Iowa Hydroinformatics Lab (UIHI Lab)*
 
 ⭐ **If you find FloodCraft helpful for your classroom or research, please consider giving this repository a star!**
