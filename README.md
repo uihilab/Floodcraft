@@ -251,22 +251,7 @@ FloodCraft is developed and maintained by the **Hydroinformatics Lab (HILab)** a
 
 ## Citation
 
-If you use FloodCraft in your research, educational program, or publication, please cite our paper:
-
-```bibtex
-@article{emiroglu2025floodcraft,
-  title={Floodcraft: Game-based Interactive Learning Environment using Minecraft for Flood Mitigation for K-12 Education},
-  author={Emiroglu, Eslim and Grant, Cori Ann and Sermet, Yusuf and Demir, Ibrahim},
-  journal={International Journal of Disaster Risk Reduction},
-  volume={130},
-  pages={105799},
-  year={2025},
-  doi={10.1016/j.ijdrr.2025.105799},
-  url={https://doi.org/10.1016/j.ijdrr.2025.105799}
-}
-```
-
-* Emiroglu, E., Grant, C. A., Sermet, Y., & Demir, I. (2025). *Floodcraft: Game-based Interactive Learning Environment using Minecraft for Flood Mitigation for K-12 Education*. International Journal of Disaster Risk Reduction, 130, 105799. [https://doi.org/10.1016/j.ijdrr.2025.105799](https://doi.org/10.1016/j.ijdrr.2025.105799)
+Emiroglu, E., Grant, C. A., Sermet, Y., & Demir, I. (2025). Floodcraft: Game-based Interactive Learning Environment using Minecraft for Flood Mitigation for K-12 Education. *International Journal of Disaster Risk Reduction*, 130, 105799. [https://doi.org/10.1016/j.ijdrr.2025.105799](https://doi.org/10.1016/j.ijdrr.2025.105799)
 
 ---
 
