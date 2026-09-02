@@ -33,25 +33,35 @@ You can find tutorials on YouTube for installing these prerequisites on your com
     - CreatureChat (Provides the AI-powered NPC interactions, compatible with 1.21.4)
     - Easy NPC and Easy NPC Config UI (Handles custom guide NPCs, compatible with 1.21.4)
 
-#### Download the World Folder
+#### Install Building & Block Mods (`BlockMods.zip`)
+To ensure the custom structures and items in the maps render correctly, you must download **`BlockMods.zip`** from this repository. Extract the contents of `Block mods.zip` and place the following mods inside your `mods` folder:
+- **Macaw's Roofs (mcw-roofs)** – Used for tent shapes.
+- **Comforts** – Adds sleeping bags used in the levels.
+- **BigSignWriter & AddonsLib** – Adds the custom large lettering/signs in the world.
 
-1. Locate the world folder Arnis World 4.2_backup_level4_start in this repository
-Place the world folder inside the saves folder located in your minecraft directory.
-When you open the game, you will see the world in your Singleplayer world list. Select the world and start playing!
+#### Download and Install the World Folders
+Locate the world folders inside the `minecraft/saves` directory of this repository:
+- **`Greenville Backup 5`** (Greenville Map)
+- **`St. Bernard Parish`** (Saint Bernard Parish Map)
+Copy both folders and paste them inside the **`saves`** folder located in your local Minecraft instance directory.
 
-### Tasks
+When you open the game, you will see both worlds in your Singleplayer world list. Select the world you want to play and begin!
 
-There are five tasks that players can choose to complete, each representing a different challenge:
-
-**Sandbag Defense**: Learn how sandbags are used as a temporary barrier against rising water. Observe the floodwaters rise and verify that the sandbag perimeter successfully protects the house.
-
-**Wildlife Rescue**: Help! Floodwaters are rising in the Jean Lafitte swamp. Locate and rescue two stranded pets: a cat and a dog. Leash them and guide them across the bridge to the safety pen before the timer runs out.
-
-**Storm Drains**: Leaves and trash are clogging the neighborhood storm drains, causing the streets to flood. Locate and clear all 5 clogged drains (marked with glowing outlines) using your shears to drain the water from the streets.
-
-**Save the Furniture**: Move valuable furniture and items to safety upstairs. Collect 12 items (beds, bookshelves, jukebox, furnace, crafting table, lectern, and armor stand with diamond armor) using your pickaxe and place them in the upstairs chest before the house floods.
-
-**Spillway Repair**: Repair a reservoir spillway to safely release high water. Swim down to clear 3 blockages from the spillway gate, retrieve the red cogwheel from the toolbox to place it on the control panel, flip the generator switch, and pull the main lever to open the gates and save the town!
+---
+## Game Levels & Challenges
+### 🌊 Saint Bernard Parish (Louisiana)
+* **Sandbag Defense**: Learn how sandbags are used as a temporary barrier against rising water. Watch the educational video and place sandbags in the 5 perimeter gaps around the house to keep it dry.
+* **Storm Drain Hunt**: Find and clear all 5 clogged neighborhood storm drains blockaded by trash and leaves to let the floodwaters drain from the streets.
+* **Wildlife & Pet Rescue**: Swamp waters are rising in the Jean Lafitte swamp. Search the trees for the glowing outlines of a stranded cat and dog, leash them, and guide them across the bridge to safety.
+* **Save the Furniture**: Move valuable furniture and electronics to safety in the attic before the ground floor of the house floods.
+* **Spillway Repair**: Dive underwater to clear 3 jammed logs, retrieve the missing part from the toolbox chest, place it on the control panel, flip the generator switch, and pull the main lever to open the spillway gates and save the town!
+### 🌾 Greenville (Mississippi)
+* **Save the Furniture**: Move valuable furniture and electronics to safety in the attic before the ground floor of the house floods.
+* **Storm Drain Hunt**: Find and clear all 5 clogged neighborhood storm drains blockaded by trash and leaves to let the floodwaters drain from the streets.
+* **Sandbag Defense**: Learn how sandbags are used as a temporary barrier against rising water. Watch the educational video and place sandbags in the 5 perimeter gaps around the house to keep it dry.
+* **Tent City Rescue**: Row a wooden boat through the flooded levee crevasse to rescue 4 stranded citizens from rooftops and bring them to safety.
+* **Relief Camp**: Gather food and water rations from the supply table and deliver them to 4 refugees resting in their tents at the Red Cross levee Tent City.
+---
 
 ## Feedback
 
