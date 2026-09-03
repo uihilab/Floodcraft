@@ -1,6 +1,7 @@
-# Ignore API configuration files containing keys
-**/creaturechat.json
-creaturechat.json
+# Ignore local environment and secret files
+.env
+.env.*
+proxy/.env
 
 # Ignore Minecraft lock files
 **/session.lock

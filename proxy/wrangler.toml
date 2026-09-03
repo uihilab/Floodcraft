@@ -1,0 +1,6 @@
+name = "floodcraft-ai-proxy"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# To set your Gemini API key secret, run:
+#   npx wrangler secret put GEMINI_API_KEY
