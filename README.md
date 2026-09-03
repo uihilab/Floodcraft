@@ -25,7 +25,7 @@ Developed by the [Hydroinformatics Lab (IHILab) at Tulane University](https://hy
   - [📍 World 2: Greenville, Mississippi](#-world-2-greenville-mississippi)
 - [Quick Level Reference](#quick-level-reference)
 - [How the Game Works](#how-the-game-works)
-- [How to Play](#how-to-play)
+- [How to Install](#how-to-install)
   - [Prerequisites](#prerequisites)
   - [Installation of Fabric and Required Mods](#installation-of-fabric-and-required-mods)
   - [Install Building & Block Mods (BlockMods.zip)](#install-building--block-mods-blockmodszip)
