@@ -25,7 +25,7 @@ execute unless data storage arnis:progress sr run data modify storage arnis:prog
 # 3. Setup selection wall and clean up Guide NPC
 function game_progression:setup_npc
 
-# 4. Keep it always daytime and weather clear, disable death messages
+# 4. Keep it always daytime and weather clear, disable death messages, set peaceful & no damage
 gamerule doDaylightCycle false
 time set day
 gamerule doWeatherCycle false
@@ -33,8 +33,18 @@ weather clear
 gamerule showDeathMessages false
 gamerule sendCommandFeedback false
 gamerule commandBlockOutput false
+gamerule doMobSpawning false
+gamerule drowningDamage false
+gamerule fallDamage false
+gamerule keepInventory true
+difficulty peaceful
 
 # 5. Set default world spawn to Sandbag Defense start
 setworldspawn 1221 -54 706 180
+
+# 6. Set default gamemode to adventure so players cannot accidentally break blocks
+defaultgamemode adventure
+gamemode adventure @a
+
 
 

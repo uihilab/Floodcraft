@@ -3,8 +3,8 @@
 # Set state to Lost (3)
 scoreboard players set #state sf_state 3
 
-# Return player to Creative mode
-gamemode creative @a
+# Return player to Adventure mode
+gamemode adventure @a
 
 # Hide Boss Bar
 bossbar set minecraft:sf_bossbar visible false

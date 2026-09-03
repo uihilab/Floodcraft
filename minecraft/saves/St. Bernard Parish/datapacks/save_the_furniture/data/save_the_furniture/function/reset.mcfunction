@@ -100,8 +100,8 @@ clear @a minecraft:wooden_pickaxe
 clear @a minecraft:wooden_axe
 clear @a minecraft:written_book
 
-# 9. Reset player gamemode to creative
-gamemode creative @a
+# 9. Reset player gamemode to adventure
+gamemode adventure @a
 
 # 10. Hide Bossbar
 bossbar set minecraft:sf_bossbar visible false

@@ -8,8 +8,8 @@ kill @e[type=minecraft:spruce_boat,x=550,y=-42,z=350,distance=..150]
 # Clear the objective book from player inventory
 clear @a minecraft:written_book
 
-# Set gamemode back to creative for exploration
-gamemode creative @a
+# Set gamemode back to adventure for exploration
+gamemode adventure @a
 
 # Clear active minigame tags (except permanent citizen tags)
 tag @e[type=!player] remove tent_npc_1

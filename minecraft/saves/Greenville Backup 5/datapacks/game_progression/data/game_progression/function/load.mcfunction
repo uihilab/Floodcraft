@@ -21,3 +21,13 @@ weather clear
 gamerule showDeathMessages false
 gamerule sendCommandFeedback false
 gamerule commandBlockOutput false
+gamerule doMobSpawning false
+gamerule drowningDamage false
+gamerule fallDamage false
+gamerule keepInventory true
+difficulty peaceful
+
+# Set default gamemode to adventure so players cannot accidentally break blocks
+defaultgamemode adventure
+gamemode adventure @a
+

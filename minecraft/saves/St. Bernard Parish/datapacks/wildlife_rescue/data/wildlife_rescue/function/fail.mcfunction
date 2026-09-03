@@ -25,8 +25,8 @@ tellraw @a [{"text":"[Wildlife Rescue] ","color":"gold"},{"text":"Time ran out o
 # function wildlife_rescue:spawn_water_y51
 # function wildlife_rescue:spawn_water_y50
 
-# Return players to Creative mode
-gamemode creative @a
+# Return players to Adventure mode
+gamemode adventure @a
 
 # Hide the progress Boss Bar
 bossbar set minecraft:wr_bossbar visible false

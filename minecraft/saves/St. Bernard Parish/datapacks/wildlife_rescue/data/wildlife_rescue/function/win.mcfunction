@@ -19,8 +19,8 @@ playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1
 # Send educational message to chat
 tellraw @a [{"text":"[Wildlife Rescue] ","color":"gold"},{"text":"Great job! You saved both animals! During floods, ecosystems and pets are extremely vulnerable. Setting up safe evacuation routes and holding pens keeps everyone safe.","color":"green"}]
 
-# Return players to Creative mode
-gamemode creative @a
+# Return players to Adventure mode
+gamemode adventure @a
 
 # Hide the progress Boss Bar
 bossbar set minecraft:wr_bossbar visible false

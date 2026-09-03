@@ -12,7 +12,7 @@ tp @e[tag=wr_animal] 1250 -200 750
 # Clear leads and books from players
 clear @a minecraft:lead
 clear @a minecraft:written_book
-gamemode creative @a
+gamemode adventure @a
 
 # Teleport players back to the bridge starting point if they lost
 execute if score #state wr_state matches 3 run tp @a 1259.5 -53.0 762.5 -90 0

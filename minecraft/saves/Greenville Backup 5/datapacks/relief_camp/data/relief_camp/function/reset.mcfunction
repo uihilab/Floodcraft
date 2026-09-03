@@ -25,4 +25,4 @@ clear @a minecraft:potion
 clear @a minecraft:mushroom_stew
 clear @a minecraft:written_book
 
-gamemode creative @a
+gamemode adventure @a

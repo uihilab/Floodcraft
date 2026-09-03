@@ -69,7 +69,7 @@ setblock 1206 -52 699 minecraft:polished_blackstone replace
 
 # 6. Reset player inventory and gamemode
 clear @a
-gamemode creative @a
+gamemode adventure @a
 
 # Hide Bossbar
 bossbar set minecraft:sd_bossbar visible false

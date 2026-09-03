@@ -98,7 +98,7 @@ kill @e[tag=sr_guide]
 
 # 6. Reset player inventory and gamemode
 clear @a
-gamemode creative @a
+gamemode adventure @a
 effect clear @a minecraft:water_breathing
 effect clear @a minecraft:conduit_power
 effect clear @a minecraft:haste

@@ -165,7 +165,7 @@ kill @e[tag=sd2_guide]
 
 # 6. Reset player inventory and gamemode
 clear @a
-gamemode creative @a
+gamemode adventure @a
 
 # 7. Hide Bossbar
 bossbar set minecraft:sd2_bossbar visible false

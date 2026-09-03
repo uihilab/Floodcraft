@@ -21,15 +21,15 @@ scoreboard players set #drain4_cleared sd2_score 0
 scoreboard players set #drain5_cleared sd2_score 0
 scoreboard players set @a sd2_deaths 0
 
-# Switch player to Survival mode so they can break blocks
-gamemode survival @a
+# Switch player to Adventure mode
+gamemode adventure @a
 
 # Clear player inventory
 clear @a
 
 # Give custom shears and guidebook
 item replace entity @a hotbar.0 with written_book[written_book_content={title:"Drain Map",author:"City Manager",pages:['{"text":"Storm Drain Hunt!\\n\\nOh no! Leaves and trash are clogging our neighborhood storm drains, causing the streets to flood!\\n\\nCan you find and clear all 5 clogged drains?\\n\\n(Flip page ->)"}','{"text":"How to Play:\\n\\n- Look for the green glowing blocks!\\n- Break the trash to clear the clog.\\n- Clearing a clog drains the water from that street!\\n- Watch the timer!"}']}] 1
-give @a minecraft:shears[minecraft:custom_name='{"text":"Clog Remover","color":"green","bold":true}',minecraft:lore=['{"text":"Use this to clear blockages","color":"gray"}','{"text":"from the storm drains!","color":"gray"}']] 1
+give @a minecraft:shears[minecraft:can_break={blocks:["minecraft:fern","minecraft:cobweb","minecraft:dead_bush","minecraft:short_grass"]},minecraft:custom_name='{"text":"Clog Remover","color":"green","bold":true}',minecraft:lore=['{"text":"Use this to clear blockages","color":"gray"}','{"text":"from the storm drains!","color":"gray"}']] 1
 
 # Teleport player near the start sign/button (facing East)
 tp @a 1206.5 -53.0 759.5 -90 0

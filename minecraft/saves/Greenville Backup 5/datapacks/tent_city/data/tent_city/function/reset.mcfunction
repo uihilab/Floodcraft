@@ -37,4 +37,4 @@ tag @e[type=!player] remove tent_npc_3
 tag @e[type=!player] remove tent_npc_4
 tag @e[type=!player] remove rescued
 
-gamemode creative @a
+gamemode adventure @a
