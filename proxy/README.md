@@ -1,5 +1,13 @@
 # FloodCraft AI Proxy (Cloudflare Worker)
 
+> [!IMPORTANT]
+> ### 🛑 For Players and Students: You do NOT need this folder!
+> If you just want to play FloodCraft, you do **not** need to install, deploy, or download anything in this folder. The world saves are already pre-configured to connect directly to the active AI server.
+>
+> **This folder is only for developers, teachers, or administrators** who wish to deploy their own self-hosted Cloudflare Worker proxy using their own Google Gemini API key.
+
+---
+
 This lightweight, free proxy allows students and teachers to chat with the in-game **AI Guide Chicken** without needing their own Google Gemini API keys or accounts.
 
 Your private `GEMINI_API_KEY` is securely stored as an environment secret inside your Cloudflare Worker, completely hidden from players and public repositories.
