@@ -208,7 +208,7 @@ You can find tutorials on YouTube for installing these prerequisites on your com
 
 #### Installation of Fabric and Required Mods
 1. Install Fabric Loader for Minecraft 1.21.4 using the installer from the Fabric website.
-   - [Link to Fabric Loader] (https://fabricmc.net)
+   - [Link to Fabric Loader](https://fabricmc.net)
 3. Locate the minecraft folder on your computer (or your launcher instance's directory), then navigate to the `mods` folder inside it.
 4. Place the following required mods (compatible with Minecraft 1.21.4) into the `mods` folder:
    - **Fabric API** (Download from CurseForge or Modrinth)
