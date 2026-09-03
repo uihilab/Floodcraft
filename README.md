@@ -193,11 +193,9 @@ FloodCraft uses standard Minecraft features paired with a few lightweight mods t
 
 ---
 
-## How to Play
+### How to Install
 
 If you would like to play the game, please follow the setup instructions below.
-
-### How to Install
 
 **Prerequisites:** 
 - Java Development Kit (JDK) 21 (required for Minecraft 1.21.4)
