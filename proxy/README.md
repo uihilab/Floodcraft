@@ -52,7 +52,7 @@ npx wrangler secret put GEMINI_API_KEY
 ## 🔗 Updating `creaturechat.json`
 
 Once your Worker is deployed, update the `"url"` field in both world save files:
-- `minecraft/saves/Greenville Backup 5/creaturechat.json`
+- `minecraft/saves/Greenville/creaturechat.json`
 - `minecraft/saves/St. Bernard Parish/creaturechat.json`
 
 Replace `<YOUR_WORKER_SUBDOMAIN>` with your Cloudflare Worker domain:

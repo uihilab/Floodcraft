@@ -10,3 +10,10 @@ session.lock
 # Ignore macOS system files
 **/.DS_Store
 .DS_Store
+
+# Ignore player session and personal data
+**/playerdata/
+**/stats/
+**/advancements/
+**/chatdata.json
+

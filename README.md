@@ -25,11 +25,12 @@ Developed by the [Hydroinformatics Lab (IHILab) at Tulane University](https://hy
   - [📍 World 2: Greenville, Mississippi](#-world-2-greenville-mississippi)
 - [Quick Level Reference](#quick-level-reference)
 - [How the Game Works](#how-the-game-works)
-- [How to Install](#how-to-install)
+- [How to Install & Play](#how-to-install--play)
   - [Prerequisites](#prerequisites)
-  - [Installation of Fabric and Required Mods](#installation-of-fabric-and-required-mods)
-  - [Install Building & Block Mods (BlockMods.zip)](#install-building--block-mods-blockmodszip)
-  - [Download and Install the World Folders](#download-and-install-the-world-folders)
+  - [Step 1: Install Fabric Loader](#step-1-install-fabric-loader)
+  - [Step 2: Install Mods (FloodcraftMods.zip)](#step-2-install-mods-floodcraftmodszip)
+  - [Step 3: Copy World Folders](#step-3-copy-world-folders)
+  - [Step 4: Launch and Play!](#step-4-launch-and-play)
 - [Feedback & Contributing](#feedback--contributing)
 - [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
@@ -193,42 +194,76 @@ FloodCraft uses standard Minecraft features paired with a few lightweight mods t
 
 ---
 
-### How to Install
+### How to Install & Play
 
-If you would like to play the game, please follow the setup instructions below.
+Follow these simple steps to get FloodCraft running on your computer.
 
-**Prerequisites:** 
-- Java Development Kit (JDK) 21 (required for Minecraft 1.21.4)
-- Minecraft Java Edition (Version 1.21.4)
-- Fabric Loader (Version 0.19.3 or latest for 1.21.4)
+#### Prerequisites
+* **Minecraft: Java Edition** (PC or Mac)
+* **Java 21** *(Included automatically by the official Minecraft Launcher)*
 
-You can find tutorials on YouTube for installing these prerequisites on your computer. Below are some links, but feel free to search for other tutorials specific to your operating system:
-- [Minecraft Java Installation on MacOS](https://www.youtube.com/watch?v=USKdqHp3Glg)
-- [Minecraft Java Installation on Other Systems](https://www.youtube.com/watch?v=V-3dlZsB0dw)
+---
 
-#### Installation of Fabric and Required Mods
-1. Install Fabric Loader for Minecraft 1.21.4 using the installer from the Fabric website.
-   - [Link to Fabric Loader](https://fabricmc.net)
-3. Locate the minecraft folder on your computer (or your launcher instance's directory), then navigate to the `mods` folder inside it.
-4. Place the following required mods (compatible with Minecraft 1.21.4) into the `mods` folder:
-   - **Fabric API** (Download from CurseForge or Modrinth)
-   - **CreatureChat** (Provides the AI-powered NPC interactions, compatible with 1.21.4)
-   - **Easy NPC and Easy NPC Config UI** (Handles custom guide NPCs, compatible with 1.21.4)
+#### Step 1: Install Fabric Loader
+FloodCraft runs on **Fabric for Minecraft 1.21.4**.
+1. Visit the [Fabric Installation Page](https://fabricmc.net/use/installer/).
+2. Download and run the installer (**"Download for Windows"** or **"Download universal .jar"** for Mac/Linux).
+3. In the installer window:
+   * Select Minecraft Version: **1.21.4**
+   * Select Loader Version: **0.16.10** (or latest)
+   * Click **Install**.
+4. Close the Fabric installer when finished.
 
-#### Install Building & Block Mods (BlockMods.zip)
-To ensure the custom structures and items in the maps render correctly, you must download `BlockMods.zip` from this repository. Extract the contents of `BlockMods.zip` and place the following mods inside your `mods` folder:
-- **Macaw's Roofs (mcw-roofs)** – Used for tent shapes.
-- **Comforts** – Adds sleeping bags used in the levels.
-- **BigSignWriter & AddonsLib** – Adds the custom large lettering/signs in the world.
+> 💡 *Need a video guide?* Check out these quick walkthroughs:
+> * [Minecraft Fabric Installation on macOS](https://www.youtube.com/watch?v=USKdqHp3Glg)
+> * [Minecraft Fabric Installation on Windows](https://www.youtube.com/watch?v=V-3dlZsB0dw)
 
-#### Download and Install the World Folders
-Locate the world folders inside the `minecraft/saves` directory of this repository:
-- **Greenville Backup 5** (Greenville Map)
-- **St. Bernard Parish** (Saint Bernard Parish Map)
+---
 
-Copy both folders and paste them inside the `saves` folder located in your local Minecraft instance directory.
+#### Step 2: Install Mods (`FloodcraftMods.zip`)
+To make setup easy, all 8 required mods (including the AI Guide Chicken, Fabric API, and custom building blocks) are already packaged together in this repository!
 
-When you open the game, you will see both worlds in your Singleplayer world list. Select the world you want to play and begin!
+1. Download **`FloodcraftMods.zip`** from the main page of this repository.
+2. Unzip `FloodcraftMods.zip` on your computer. You will see 8 `.jar` mod files.
+3. Open your computer's **Minecraft folder**:
+   * **Easy way from the Launcher**: Open the Minecraft Launcher, click the **Installations** tab at the top, hover over **Fabric Loader 1.21.4**, and click the **Folder icon (📁)**.
+   * **Windows shortcut**: Press `Win + R`, type `%appdata%\.minecraft`, and press **Enter**.
+   * **Mac shortcut**: In Finder, press `Cmd + Shift + G`, paste `~/Library/Application Support/minecraft`, and press **Enter**.
+4. Open the **`mods`** folder inside your Minecraft folder *(if you don't see a `mods` folder yet, just create a new folder and name it `mods`)*.
+5. Move all 8 `.jar` files into this **`mods`** folder.
+
+<details>
+<summary>📋 Click to view the 8 included mods in FloodcraftMods.zip</summary>
+
+| Mod | Purpose in FloodCraft |
+| :--- | :--- |
+| **Fabric API** | Core library required for Fabric mods |
+| **CreatureChat** | Powers AI conversations with the Guide Chicken |
+| **Easy NPC** | Manages custom guide chicken NPCs and behaviors |
+| **Easy NPC Config UI** | Interface companion for Easy NPC |
+| **Macaw's Roofs** | Used for tent shapes in relief camp level |
+| **Comforts** | Adds sleeping bags used across levels |
+| **BigSignWriter** | Renders large informational signage and lettering |
+| **AddonsLib** | Library dependency for BigSignWriter |
+
+</details>
+
+---
+
+#### Step 3: Copy World Folders
+1. In this repository, open the `minecraft/saves` directory to find the two game worlds:
+   * **`Greenville`** (Greenville, Mississippi map)
+   * **`St. Bernard Parish`** (St. Bernard Parish, Louisiana map)
+2. Copy both of these folders.
+3. Paste them into the **`saves`** folder inside your local Minecraft folder (the same directory you opened in Step 2).
+
+---
+
+#### Step 4: Launch and Play!
+1. Open the **Minecraft Launcher**.
+2. In the bottom-left dropdown menu, make sure **Fabric Loader 1.21.4** is selected.
+3. Click **Play**!
+4. From the main menu, click **Singleplayer**, select either **Greenville** or **St. Bernard Parish**, and click **Play Selected World**.
 
 ---
 
