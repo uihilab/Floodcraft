@@ -17,3 +17,6 @@ session.lock
 **/advancements/
 **/chatdata.json
 
+# Ignore Cloudflare Wrangler and Node dependencies
+**/.wrangler/
+**/node_modules/

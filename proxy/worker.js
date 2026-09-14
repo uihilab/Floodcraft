@@ -89,10 +89,32 @@ export default {
         body: JSON.stringify(incomingBody),
       });
 
-      const responseData = await upstreamResponse.text();
+      if (!upstreamResponse.ok) {
+        const errorText = await upstreamResponse.text();
+        return new Response(errorText, {
+          status: upstreamResponse.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        });
+      }
 
-      return new Response(responseData, {
-        status: upstreamResponse.status,
+      const responseJson = await upstreamResponse.json();
+
+      // Ensure that character generation responses ALWAYS have a valid, non-N/A Short Greeting
+      // and strip any <LEAD> tags to prevent CreatureChat from pathfinding into random underground targets
+      if (responseJson && responseJson.choices && responseJson.choices.length > 0) {
+        const message = responseJson.choices[0].message;
+        if (message && typeof message.content === "string") {
+          message.content = ensureCharacterGreeting(message.content, incomingBody);
+          // Strip <LEAD> and <UNLEAD> to prevent CreatureChat RandomTargetFinder from leading players underground
+          message.content = message.content.replace(/<LEAD>/gi, "").replace(/<UNLEAD>/gi, "").trim();
+        }
+      }
+
+      return new Response(JSON.stringify(responseJson), {
+        status: 200,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
@@ -113,3 +135,69 @@ export default {
     }
   },
 };
+
+/**
+ * Ensures that newly generated character sheets have a valid, spoken Short Greeting
+ * so the Guide Chicken never displays "N/A" on the first player interaction.
+ */
+function ensureCharacterGreeting(content, fullRequest) {
+  if (!content || typeof content !== "string") return content;
+
+  // Only apply to character sheet responses
+  if (!content.includes("Personality:") && !content.includes("Name:") && !content.includes("Speaking Style")) {
+    return content;
+  }
+
+  // Normalize markdown bold variations of Short Greeting
+  let updated = content
+    .replace(/\*\*Short Greeting:\*\*/gi, "- Short Greeting:")
+    .replace(/\*\*Short Greeting\*\*:/gi, "- Short Greeting:")
+    .replace(/^[ \t]*Short Greeting\s*:/gim, "- Short Greeting:");
+
+  // Check if a valid Short Greeting line already exists
+  const match = updated.match(/-?\s*short greeting:\s*(.+)/i);
+  if (match && match[1].trim().length > 3 && !/^["']?N\/?A["']?$/i.test(match[1].trim())) {
+    return updated;
+  }
+
+  // Extract guide name/level
+  let guideName = "Guide";
+  const nameMatch = updated.match(/-?\s*name:\s*(.+)/i);
+  if (nameMatch) {
+    guideName = nameMatch[1].replace(/["\n\r]/g, "").trim();
+  }
+
+  const reqStr = JSON.stringify(fullRequest || {});
+  const isGreenville = reqStr.includes("Greenville") || updated.includes("Greenville");
+  let greeting = "";
+
+  if (guideName.includes("L1") || guideName.includes("1")) {
+    greeting = isGreenville
+      ? "Welcome to Greenville, Mississippi! Cluck cluck! We need to rush inside and save 12 household items in the attic before the flood arrives. Press the start button beside me when you are ready!"
+      : "Welcome to St. Bernard Parish, Louisiana! Rising storm surge is heading towards this house. Watch the video using the crimson button, then press the start button beside me to place sandbags!";
+  } else if (guideName.includes("L2") || guideName.includes("2")) {
+    greeting = isGreenville
+      ? "Great job on Level 1! For Level 2, we need to locate and clear 5 clogged street drains with shears. Press the start button beside me to begin!"
+      : "Great work! For Level 2, floodwaters are clogging neighborhood storm drains. Grab your shears and press the start button beside me to clear the drains!";
+  } else if (guideName.includes("L3") || guideName.includes("3")) {
+    greeting = isGreenville
+      ? "Welcome to Sandbag Defense! We need to build sandbag barriers around the building. Watch the educational video with the crimson button, then press the start button beside me!"
+      : "Welcome to Wildlife Rescue! Floodwaters are rising in the swamp. Grab a lead, rescue the stranded pets, and bring them across the bridge! Press the start button to start!";
+  } else if (guideName.includes("L4") || guideName.includes("4")) {
+    greeting = isGreenville
+      ? "A river levee broke! Jump into a rescue boat, find the 4 stranded citizens in the floodwaters, and bring them safely to the tents. Press the start button beside me to begin!"
+      : "Water has entered the ground floor! Rush inside, collect 12 valuable household items, and store them safely in the upstairs chest. Press the start button beside me to begin!";
+  } else if (guideName.includes("L5") || guideName.includes("5")) {
+    greeting = isGreenville
+      ? "Welcome to the Relief Camp! Grab food and clean water rations from the supply table and deliver them to our 4 residents resting in the tents. Press the start button to begin!"
+      : "A reservoir is overflowing! Dive down to clear blockages, grab a spare cogwheel to fix the controls, and open the spillway gate! Press the start button beside me to begin!";
+  } else {
+    greeting = "Hello! I am your flood-proofing Guide Chicken. Press the start button beside me when you are ready to begin this challenge!";
+  }
+
+  // Replace existing N/A line or append new Short Greeting line
+  if (match) {
+    return updated.replace(/-?\s*short greeting:\s*(.+)/i, `- Short Greeting: "${greeting}"`);
+  }
+  return updated.trim() + `\n- Short Greeting: "${greeting}"`;
+}
