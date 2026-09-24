@@ -137,57 +137,43 @@ export default {
 };
 
 /**
- * Ensures that newly generated character sheets have a valid, spoken Short Greeting
- * so the Guide Chicken never displays "N/A" on the first player interaction.
+ * Ensures that character responses and sheets ALWAYS have a valid, spoken greeting
+ * so the Guide Chicken never displays "N/A" on player interactions.
  */
 function ensureCharacterGreeting(content, fullRequest) {
   if (!content || typeof content !== "string") return content;
 
-  // Only apply to character sheet responses
-  if (!content.includes("Personality:") && !content.includes("Name:") && !content.includes("Speaking Style")) {
-    return content;
-  }
+  const trimmed = content.trim();
+  const isDirectNA = /^["']?N\/?A[.'"!]?$/i.test(trimmed);
 
-  // Normalize markdown bold variations of Short Greeting
-  let updated = content
-    .replace(/\*\*Short Greeting:\*\*/gi, "- Short Greeting:")
-    .replace(/\*\*Short Greeting\*\*:/gi, "- Short Greeting:")
-    .replace(/^[ \t]*Short Greeting\s*:/gim, "- Short Greeting:");
-
-  // Check if a valid Short Greeting line already exists
-  const match = updated.match(/-?\s*short greeting:\s*(.+)/i);
-  if (match && match[1].trim().length > 3 && !/^["']?N\/?A["']?$/i.test(match[1].trim())) {
-    return updated;
-  }
+  const reqStr = JSON.stringify(fullRequest || {});
+  const isGreenville = reqStr.includes("Greenville") || content.includes("Greenville");
 
   // Extract guide name/level
   let guideName = "Guide";
-  const nameMatch = updated.match(/-?\s*name:\s*(.+)/i);
+  const nameMatch = content.match(/-?\s*name:\s*(.+)/i) || reqStr.match(/Guide\s*L?[1-5]/i);
   if (nameMatch) {
-    guideName = nameMatch[1].replace(/["\n\r]/g, "").trim();
+    guideName = nameMatch[1] ? nameMatch[1].replace(/["\n\r]/g, "").trim() : nameMatch[0];
   }
 
-  const reqStr = JSON.stringify(fullRequest || {});
-  const isGreenville = reqStr.includes("Greenville") || updated.includes("Greenville");
   let greeting = "";
-
-  if (guideName.includes("L1") || guideName.includes("1")) {
+  if (/L1|Level 1|\b1\b/i.test(guideName)) {
     greeting = isGreenville
       ? "Welcome to Greenville, Mississippi! Cluck cluck! We need to rush inside and save 12 household items in the attic before the flood arrives. Press the start button beside me when you are ready!"
       : "Welcome to St. Bernard Parish, Louisiana! Rising storm surge is heading towards this house. Watch the video using the crimson button, then press the start button beside me to place sandbags!";
-  } else if (guideName.includes("L2") || guideName.includes("2")) {
+  } else if (/L2|Level 2|\b2\b/i.test(guideName)) {
     greeting = isGreenville
       ? "Great job on Level 1! For Level 2, we need to locate and clear 5 clogged street drains with shears. Press the start button beside me to begin!"
       : "Great work! For Level 2, floodwaters are clogging neighborhood storm drains. Grab your shears and press the start button beside me to clear the drains!";
-  } else if (guideName.includes("L3") || guideName.includes("3")) {
+  } else if (/L3|Level 3|\b3\b/i.test(guideName)) {
     greeting = isGreenville
       ? "Welcome to Sandbag Defense! We need to build sandbag barriers around the building. Watch the educational video with the crimson button, then press the start button beside me!"
       : "Welcome to Wildlife Rescue! Floodwaters are rising in the swamp. Grab a lead, rescue the stranded pets, and bring them across the bridge! Press the start button to start!";
-  } else if (guideName.includes("L4") || guideName.includes("4")) {
+  } else if (/L4|Level 4|\b4\b/i.test(guideName)) {
     greeting = isGreenville
       ? "A river levee broke! Jump into a rescue boat, find the 4 stranded citizens in the floodwaters, and bring them safely to the tents. Press the start button beside me to begin!"
       : "Water has entered the ground floor! Rush inside, collect 12 valuable household items, and store them safely in the upstairs chest. Press the start button beside me to begin!";
-  } else if (guideName.includes("L5") || guideName.includes("5")) {
+  } else if (/L5|Level 5|\b5\b/i.test(guideName)) {
     greeting = isGreenville
       ? "Welcome to the Relief Camp! Grab food and clean water rations from the supply table and deliver them to our 4 residents resting in the tents. Press the start button to begin!"
       : "A reservoir is overflowing! Dive down to clear blockages, grab a spare cogwheel to fix the controls, and open the spillway gate! Press the start button beside me to begin!";
@@ -195,9 +181,37 @@ function ensureCharacterGreeting(content, fullRequest) {
     greeting = "Hello! I am your flood-proofing Guide Chicken. Press the start button beside me when you are ready to begin this challenge!";
   }
 
-  // Replace existing N/A line or append new Short Greeting line
-  if (match) {
-    return updated.replace(/-?\s*short greeting:\s*(.+)/i, `- Short Greeting: "${greeting}"`);
+  // If the entire response from the model is literally N/A or empty, replace it completely
+  if (isDirectNA || trimmed.length === 0) {
+    return greeting;
   }
-  return updated.trim() + `\n- Short Greeting: "${greeting}"`;
+
+  const isCharacterSheet = /character sheet|personality|speaking style|\bname:/i.test(content);
+  if (!isCharacterSheet) {
+    return content;
+  }
+
+  // Normalize any variation of Short Greeting (markdown bold, bullets, asterisks, colons)
+  let updated = content.replace(/^[ \t*#-]*short greeting[ \t*:*-]*/gim, "- Short Greeting: ");
+
+  // Check if a valid, non-N/A Short Greeting line exists
+  const match = updated.match(/^[ \t]*- Short Greeting:[ \t]*(.+)/im);
+  if (match && match[1].trim().length > 3 && !/^["']?N\/?A["']?$/i.test(match[1].trim())) {
+    let validGreeting = match[1].trim().replace(/^[*_\s"'\\]+|[*_\s"'\\]+$/g, "");
+    return updated.replace(/^[ \t]*- Short Greeting:[ \t]*(.+)/im, `- Short Greeting: "${validGreeting}"`);
+  }
+
+  if (match) {
+    return updated.replace(/^[ \t]*- Short Greeting:[ \t]*(.+)/im, `- Short Greeting: "${greeting}"`);
+  }
+
+  // Inject greeting near the top of the character sheet (right after Name) so CreatureChat's parser reads it immediately
+  let lines = updated.split("\n");
+  let insertIdx = lines.findIndex(l => /name:/i.test(l));
+  if (insertIdx !== -1) {
+    lines.splice(insertIdx + 1, 0, `- Short Greeting: "${greeting}"`);
+    return lines.join("\n");
+  }
+
+  return `- Short Greeting: "${greeting}"\n` + updated;
 }

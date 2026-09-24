@@ -20,3 +20,9 @@ session.lock
 # Ignore Cloudflare Wrangler and Node dependencies
 **/.wrangler/
 **/node_modules/
+
+# Ignore local paper drafts & outlines
+PAPER_OUTLINE.md
+*paper_outline*
+*proposal*
+
